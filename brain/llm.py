@@ -94,3 +94,30 @@ def verify(question, answer, sources):
     except Exception:
         _down["verifier"] = time.time() + 60
         return None, "no checker"
+
+
+# ------------------------------------------------------------------ live health probe (for the dashboard "warming up" state)
+_health_cache = {"t": 0, "v": None}
+
+
+def _probe(url, tok):
+    import urllib.request
+    try:
+        req = urllib.request.Request(url.rstrip("/") + ("" if url.rstrip("/").endswith("/v1") else "/v1") + "/models", headers=auth_headers(tok))
+        return urllib.request.urlopen(req, timeout=4).status == 200
+    except Exception:
+        return False
+
+
+def health():
+    """{'assistant': 'up'|'loading'|'off', 'checker': ..., 'ready': bool} — probed live, cached 15 s.
+    'loading' = configured but not answering (e.g. the model server is restarting after a hardware swap)."""
+    if time.time() - _health_cache["t"] < 15 and _health_cache["v"]:
+        return _health_cache["v"]
+    out = {}
+    for key, uenv, tenv in (("assistant", "STUDENT_URL", "STUDENT_TOKEN"), ("checker", "VERIFIER_URL", "VERIFIER_TOKEN")):
+        url = os.environ.get(uenv)
+        out[key] = "off" if not url else ("up" if _probe(url, os.environ.get(tenv) or os.environ.get("LLM_TOKEN")) else "loading")
+    out["ready"] = out["assistant"] == "up" and out["checker"] in ("up", "off")
+    _health_cache.update(t=time.time(), v=out)
+    return out

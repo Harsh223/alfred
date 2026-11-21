@@ -1,6 +1,6 @@
 """Company Brain core: DB, vault (de)pseudonymisation, role-filtered retrieval over APPROVED memory, Q&A with citations,
 abstention, proactive briefs, memory curation. English UI/answers."""
-import json, os, re, shutil, threading, datetime as dt, html
+import contextvars, json, os, re, shutil, threading, datetime as dt, html
 import duckdb
 
 from . import llm
@@ -182,10 +182,13 @@ def pseudonymise_query(text):
     return out
 
 
+NO_REID = contextvars.ContextVar("no_reid", default=False)   # set per request for arena team sessions: pseudonyms stay masked
+
+
 def render(text, role, audit_actor=None, object_id=None):
     """HTML-escape, then show pseudonyms re-identified (authorised roles only) or as masked chips. [DOC-ID] citations become links."""
     t = html.escape(text or "")
-    allowed = ROLES.get(role, {}).get("reid", False)
+    allowed = ROLES.get(role, {}).get("reid", False) and not NO_REID.get()
     revealed = []
 
     def sub(m):

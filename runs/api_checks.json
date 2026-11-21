@@ -1,12 +1,12 @@
 {
  "passed": 38,
  "total": 38,
- "ts": "2026-11-21T14:52:59",
+ "ts": "2026-11-21T15:31:56",
  "checks": [
   {
    "test": "health is public",
    "pass": true,
-   "evidence": "200 {\"status\":\"ok\",\"version\":\"1.0.0\",\"documents\":86,\"llm\":{\"student\":\"configured\"},\"checker\":\"down\"}"
+   "evidence": "200 {\"status\":\"ok\",\"version\":\"1.0.0\",\"documents\":86,\"llm\":{\"student\":\"configured\"},\"checker\":\"configured"
   },
   {
    "test": "metrics is public and has suites + red-team rounds",
@@ -171,7 +171,7 @@
   {
    "test": "four-eyes: requester key cannot approve its own request",
    "pass": true,
-   "evidence": "A-REQ-1795269179 409 four_eyes_blocked"
+   "evidence": "A-REQ-1795271516 409 four_eyes_blocked"
   },
   {
    "test": "every API call is audited (api_call), visible to compliance",

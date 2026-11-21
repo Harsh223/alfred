@@ -430,7 +430,11 @@ def audit(object_id: Optional[str] = Query(None, description="e.g. CASE-0001 (al
 
 @router.get("/health", tags=["Public"], summary="Service health (public)")
 def health():
-    return {"status": "ok", "version": VERSION, "documents": C.q("SELECT count(*) n FROM documents")[0]["n"], "llm": llm.status(), "checker": checker_status()}
+    try:
+        models = llm.health()   # live probe, cached 15 s: assistant/checker 'up' | 'loading' | 'off'
+    except Exception:
+        models = None
+    return {"status": "ok", "version": VERSION, "documents": C.q("SELECT count(*) n FROM documents")[0]["n"], "llm": llm.status(), "checker": checker_status(), "models": models}
 
 
 @router.get("/metrics", tags=["Public"], summary="Evaluation and red-team metrics (public, no personal data)")

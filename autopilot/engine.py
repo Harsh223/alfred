@@ -83,7 +83,24 @@ def letter(case, channel):
             f"If you are in financial difficulty, contact us before then: we will assess forbearance options such as a payment plan, and you can get free, independent debt advice. — Lumen Bank, Credit Department")
 
 
+import threading as _th
+_RUN_LOCK = _th.Lock()
+
+
 def run(actor, role, use_llm=True):
+    """Serialised: a second click while a run is in progress waits for it instead of corrupting the case table."""
+    if not _RUN_LOCK.acquire(blocking=False):
+        C.audit(actor, role, "autopilot_run_skipped", None, {"reason": "a run is already in progress"})
+        _RUN_LOCK.acquire()          # wait for the running one, then return its fresh KPIs
+        _RUN_LOCK.release()
+        return kpis()
+    try:
+        return _run(actor, role, use_llm)
+    finally:
+        _RUN_LOCK.release()
+
+
+def _run(actor, role, use_llm=True):
     """Process the whole arrears extract. Returns KPIs."""
     C.x("DELETE FROM cases"); C.x("DELETE FROM triage_log")
     C.x("DELETE FROM actions WHERE proposed_by='autopilot' AND status='proposed'")

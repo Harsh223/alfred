@@ -38,6 +38,7 @@ aside.side{background:var(--side);border-right:1px solid var(--line);padding:12p
 .top .right{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:13px;color:var(--mute)}
 .pill{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 11px;border:1px solid var(--line);border-radius:99px;color:var(--ink2);font-size:12.5px;font-weight:500;background:var(--surface)}
 .pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok)}.pill.off::before{background:var(--warn)}
+.pill.arena{color:var(--accent-ink);border-color:var(--accent);background:var(--accent-bg)}.pill.arena::before{background:var(--accent-ink)}
 .me{display:flex;align-items:center;gap:10px;padding-left:14px;border-left:1px solid var(--line)}.me .nm{color:var(--ink);font-weight:550;line-height:1.25;font-size:13px}.me .rl{font-size:12px;color:var(--mute);line-height:1.25}
 .me .rl a{color:var(--mute);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:2px}.me .rl a:hover{color:var(--ink)}
 .avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(140deg,#3a3f8f,#5e6ad2);display:grid;place-items:center;font-weight:650;font-size:11.5px;color:#fff;letter-spacing:.3px}
@@ -266,7 +267,7 @@ def panel(title, body, count=None, right=""):
             f'<div class="list">{body}</div></div>')
 
 
-def page(title, body, active="", user=None, role_label=None, llm_status=None, pending=0, credit=True):
+def page(title, body, active="", user=None, role_label=None, llm_status=None, pending=0, credit=True, team=None):
     side = ""
     if user:
         def nv(h, t):
@@ -281,9 +282,11 @@ def page(title, body, active="", user=None, role_label=None, llm_status=None, pe
     if user:
         on = bool(llm_status) and any(v == "configured" for v in llm_status.values())
         initials = "".join(w[0] for w in user.split()[:2]).upper()
-        right = (f'<span class="pill {"" if on else "off"}" title="Language model status">{"AI on-prem" if on else "AI offline · safe mode"}</span>'
+        arena = (f'<span class="pill arena" title="Everything you do is scored on the Attack ALFRED leaderboard">Team: {html.escape(team)} · arena mode</span>'
+                 f'<a class="btn ghost sm" href="/arena/breach">Report a breach</a>') if team else ""
+        right = (arena + f'<span class="pill {"" if on else "off"}" title="Language model status">{"AI on-prem" if on else "AI offline · safe mode"}</span>'
                  f'<span class="me"><span class="avatar">{initials}</span><span class="tx2"><div class="nm">{html.escape(user)}</div>'
-                 f'<div class="rl">{html.escape(role_label or "")} · <a href="/logout">Switch</a></div></span></span>')
+                 f'<div class="rl">{html.escape(role_label or "")} · <a href="{"/arena#join" if team else "/logout"}">Switch</a></div></span></span>')
     crumb = CRUMB.get(active)
     top = (f'<div class="top"><div class="crumb">{f"<span>{crumb}</span><span>/</span>" if crumb else ""}<b>{html.escape(title)}</b></div>'
            f'<div class="right">{right}</div></div>')

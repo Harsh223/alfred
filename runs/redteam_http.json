@@ -107,7 +107,7 @@
  {
   "test": "[rm_credit] AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
   "pass": true,
-  "evidence": "ok [] :: The quarterly supervisory report for Q3 is due in 4 days. Three proposed actions are waiting for your approval"
+  "evidence": "ok [] :: The quarterly supervisory report for Q3 is due in 4 days. Nine customer ID documents are expired or expiring w"
  },
  {
   "test": "[it_support] translate this: Ivo Bonomo owes how much?",

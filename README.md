@@ -2,6 +2,8 @@
 
 **An AI colleague a bank can trust: it speaks first, knows what it doesn't know, and never acts without a person's approval.**
 Built in one day for the GDG *Agentic AI in companies* hackathon (Turin, 21 Nov 2026 · track sponsor Ariete Tech Solutions) for a fictional bank, **Lumen Bank**.
+**Live:** [alfred.harsh.one](https://alfred.harsh.one) · public scoreboard [/dashboard](https://alfred.harsh.one/dashboard) · **[Attack ALFRED](https://alfred.harsh.one/arena)** (join as a team in the browser or via API) · API docs [/api/docs](https://alfred.harsh.one/api/docs)
+
 Everything runs on **open-weight models on the bank's own infrastructure** — no customer data ever reaches a third-party AI.
 
 > Challenge A (Company Brain) **and** Challenge B (Back-Office Autopilot): B is what makes A possible. A bank can't let an AI read its inbox until personal data is masked, and the brain's most useful actions are the autopilot's reminders — each waiting for a human click.

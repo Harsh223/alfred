@@ -115,13 +115,21 @@ curl -s -X POST $BASE/v1/arena/breach -H "X-API-Key: $FIN" -H 'Content-Type: app
 
 | Method | Path | Auth | What it does |
 |---|---|---|---|
-| POST | `/v1/arena/register` | public | `{team}` (2-40 chars; letters, digits, space, `_ . -`; HTML and other characters are stripped; names that match a vault value are refused). Returns one **Finance** key (`rm_credit`) and one **Tech** key (`it_support`). One registration per team name (`409 team_exists`), at most 50 teams (`ARENA_MAX_TEAMS`), 5 registrations per minute per IP (`429`). |
+| POST | `/v1/arena/register` | public | `{team}` (2-40 chars; letters, digits, space, `_ . -`; HTML and other characters are stripped; names that match a vault value are refused). Returns one **Finance** key (`rm_credit`) and one **Tech** key (`it_support`). One registration per team name (`409 team_exists`), at most 50 teams (`ARENA_MAX_TEAMS`), 5 successful registrations per minute per IP (`429`). |
 | POST | `/v1/arena/breach` | arena team key | `{description, request_example, expected_harm}` → `{id, status: "submitted"}`. Vault values, rules-layer PII and API keys are masked before storage. 50 reports per team. |
 | POST | `/v1/arena/breach/{id}/verdict` | `X-Admin-Token` = env `ADMIN_TOKEN` | `{verdict: confirmed\|rejected, note}`. Without a valid token: `403` (also when `ADMIN_TOKEN` is unset) and an `arena_verdict_blocked` audit event. |
 | GET | `/v1/arena/breaches` | public | id, team, short description, status, organiser note. No keys, no request bodies. |
 | GET | `/v1/arena/leaderboard` | public | Totals (teams, attempts, blocked, real-data leaks, unauthorised actions, breaches) and one row per team. |
 | DELETE | `/v1/arena/teams/{team}` | `X-Admin-Token` | Organisers: remove a team, its keys, calls and reports. |
 | GET | `/arena` | public | The leaderboard page: totals strip, team table, defence layers fired, rules, how to play, breach reports. |
+
+**GUI mode.** Teams can also play in the browser. On `/arena`, **Join the arena** (`POST /arena/join`, form field `team`, same validation and limits as the API) shows the two API keys once, with copy buttons, and two buttons: **Attack as Finance (relationship manager)** and **Attack as Tech (IT support)** (`POST /arena/play`). These sign the browser in with an HMAC-signed `arena` cookie that carries the team and role. The signing key is `ARENA_SECRET`, otherwise one derived from `ADMIN_TOKEN`, otherwise a random secret kept in the arena store. The cookie lasts 12 h and is httponly and SameSite=Lax. A forged or tampered cookie (other team, other role) is ignored, and so is a cookie for a removed team.
+
+- Team sessions see the normal app with a **Team: X · arena mode** badge and a **Report a breach** button (`GET/POST /arena/breach`, stored like API reports).
+- Every web request (chat `/api/ask`, memory add and decide, approvals, autopilot buttons, document and page views) is attributed to the team the same way as API calls: layers fired, leak check, unauthorised-action check. The actor is `<staff name> [<team>]`.
+- In the GUI, the approve click is the human approval. Four-eyes still counts as an unauthorised action if it is bypassed.
+- Team sessions never see re-identified customers (pseudonyms stay masked, and outbox letters are pseudonymised). Each team has its own chat history.
+- Signing in through `/login` or `/as/...`, or logging out, ends the team session. Normal demo users are unaffected.
 
 **Keys.** Arena keys work on every `/v1` endpoint with the same rules as any other key (role from the key, 60 requests/minute, `428` without human approval, four-eyes). The server keeps only their SHA-256 hashes in the arena store, so a lost key cannot be recovered. Keys are never logged. Arena keys reading `/v1/audit` don't see client IPs.
 
@@ -147,8 +155,10 @@ curl -s -X POST $BASE/v1/arena/breach -H "X-API-Key: $FIN" -H 'Content-Type: app
 | Env | Default | Effect |
 |---|---|---|
 | `ARENA_MODE` | `1` | `0` removes `/arena` and `/v1/arena/*` (arena keys then stop working). |
+| `ARENA_PUBLIC` | off | `1`: team sessions don't see the **Run autopilot** and **Approve all** buttons, and those POSTs return `403` (layer "public arena lock"). `/v1/autopilot/run` with an arena key also returns `403`. Everything else keeps working. |
+| `ARENA_SECRET` | – | Signing key for GUI team sessions (default: derived from `ADMIN_TOKEN`). |
 | `ARENA_RESET_MIN` | off | Reset the bank instance every N minutes: same as `/admin/reset` (`C.reset()`, outbox cleared, briefs regenerated). Teams, key hashes, scores and breach reports are kept. |
-| `ARENA_DB` | `runs/arena.duckdb` | Arena store, separate from the bank DB so resets don't touch it. |
+| `ARENA_DB` | `runs/arena.duckdb` | Arena store, separate from the bank DB so resets don't touch it. One process at a time: give each instance its own file. If the file is locked by another process, the app starts without the arena and logs a warning. |
 | `ARENA_MAX_TEAMS` | `50` | Team cap. |
 | `ARENA_TRUST_PROXY` | off | `1`: use the first `X-Forwarded-For` address for the per-IP registration limit (only behind your own reverse proxy). |
 | `ADMIN_TOKEN` | – | Needed for verdicts and team removal. |
@@ -157,6 +167,6 @@ curl -s -X POST $BASE/v1/arena/breach -H "X-API-Key: $FIN" -H 'Content-Type: app
 
 ```bash
 .venv/bin/python tests/api_checks.py      # 38 checks: keys, 401, role denials, 428, four-eyes, rate limit, no PII in /v1/metrics
-.venv/bin/python tests/arena_checks.py    # 38 checks: register, duplicate team, attacks attributed per layer, 0 leaks, breach + verdict, no keys/PII on /arena
+.venv/bin/python tests/arena_checks.py    # 60 checks: API + GUI join, keys shown once, forged/tampered team cookies, attacks attributed per layer, 0 leaks, breach API + form, verdicts, no keys/PII on /arena
 runs/reset.sh                              # restore the demo state afterwards
 ```

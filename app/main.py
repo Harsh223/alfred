@@ -12,22 +12,46 @@ USERS = {"rm_credit": "Anna Ferri", "it_support": "Luca Bruno", "compliance": "S
 BRIEF_EVERY_MIN = int(os.environ.get("BRIEF_EVERY_MIN", "30"))
 
 
+_arena = None   # app.arena when ARENA_MODE is on (installed at the bottom of this file)
+
+
+def team_of(req):
+    """Arena team session (team, role) from the signed cookie, or None for normal demo users."""
+    return _arena.session(req) if _arena else None
+
+
+def arena_locked(req):
+    """Public arena: team sessions can't start on-demand autopilot runs or bulk approvals."""
+    return bool(team_of(req)) and _arena.public_arena()
+
+
 def sess(req):
+    t = team_of(req)
+    if t:                                   # team session: role and identity come from the signed cookie only
+        return t[1], _arena.web_actor(t[1], t[0])
     role = req.cookies.get("role")
     return (role, USERS[role]) if role in C.ROLES else (None, None)
 
 
 def P(req, title, body, active=""):
     role, user = sess(req)
+    t = team_of(req)
     pend = C.q("SELECT count(*) n FROM actions WHERE status='proposed'")[0]["n"] if role and C.ROLES[role]["credit"] else 0
-    return HTMLResponse(page(title, body, active, user, C.ROLES[role]["label"] if role else None, llm.status(), pend, C.ROLES[role]["credit"] if role else True))
+    return HTMLResponse(page(title, body, active, user, C.ROLES[role]["label"] if role else None, llm.status(), pend, C.ROLES[role]["credit"] if role else True,
+                             team=t[0] if t else None))
 
 
 def need(req):
     role, user = sess(req)
     if not role:
         raise _Redirect()
+    C.NO_REID.set(bool(team_of(req)))       # arena teams never see re-identified customers
     return role, user
+
+
+def _chat_scope(req, role):
+    t = team_of(req)
+    return f"{role}|{t[0]}" if t else role   # each arena team has its own chat history
 
 
 class _Redirect(Exception):
@@ -122,6 +146,7 @@ def login(req: Request):
 @app.post("/login")
 def do_login(role: str = Form(...)):
     r = RedirectResponse("/today", 303)
+    r.delete_cookie("arena")
     if role in C.ROLES:
         r.set_cookie("role", role, httponly=True, samesite="lax")
         C.audit(USERS[role], role, "login", None, {})
@@ -132,6 +157,7 @@ def do_login(role: str = Form(...)):
 def login_as(role: str, next: str = "/today"):
     """One-click demo login (same effect as the login page)."""
     r = RedirectResponse(next if next.startswith("/") else "/today", 303)
+    r.delete_cookie("arena")
     if role in C.ROLES:
         r.set_cookie("role", role, httponly=True, samesite="lax")
         C.audit(USERS[role], role, "login", None, {})
@@ -140,7 +166,7 @@ def login_as(role: str, next: str = "/today"):
 
 @app.get("/logout")
 def logout():
-    r = RedirectResponse("/login", 303); r.delete_cookie("role"); return r
+    r = RedirectResponse("/login", 303); r.delete_cookie("role"); r.delete_cookie("arena"); return r
 
 
 @app.get("/")
@@ -280,7 +306,7 @@ def _question_html(t):
 @app.get("/chat", response_class=HTMLResponse)
 def chat(req: Request):
     role, user = need(req)
-    rows = C.q("SELECT * FROM chat_log WHERE role=? ORDER BY ts", [role]) if "chat_log" in [r[0] for r in C.rows("SHOW TABLES")] else []
+    rows = C.q("SELECT * FROM chat_log WHERE role=? ORDER BY ts", [_chat_scope(req, role)]) if "chat_log" in [r[0] for r in C.rows("SHOW TABLES")] else []
     hist = ""
     for m in rows:
         if m["who"] == "ALFRED":
@@ -318,7 +344,7 @@ def chat(req: Request):
 @app.post("/chat/clear")
 def chat_clear(req: Request):
     role, user = need(req)
-    C.x("DELETE FROM chat_log WHERE role=?", [role])
+    C.x("DELETE FROM chat_log WHERE role=?", [_chat_scope(req, role)])
     return RedirectResponse("/chat", 303)
 
 
@@ -328,9 +354,10 @@ async def api_ask(req: Request):
     qtext = (await req.json()).get("q", "")[:800]
     a = C.answer(qtext, role, actor=user)
     note = "Role claims typed in the chat are ignored. Your access comes from your sign-in." if a["meta"].get("role_claim_ignored") else ""
-    C.x("INSERT INTO chat_log VALUES (now(), ?, ?, ?, ?)", [role, user, qtext, "{}"])
+    scope = _chat_scope(req, role)
+    C.x("INSERT INTO chat_log VALUES (now(), ?, ?, ?, ?)", [scope, user, qtext, "{}"])
     meta = {"sources": a["sources"], "model": a["model"], "status": a["status"], "note": note}
-    C.x("INSERT INTO chat_log VALUES (now(), ?, 'ALFRED', ?, ?)", [role, a["text"], json.dumps(meta, ensure_ascii=False)])
+    C.x("INSERT INTO chat_log VALUES (now(), ?, 'ALFRED', ?, ?)", [scope, a["text"], json.dumps(meta, ensure_ascii=False)])
     return JSONResponse({"html": _answer_html(role, a["text"], a["sources"], a["model"], a["status"], note), "status": a["status"]})
 
 
@@ -458,7 +485,7 @@ def actions(req: Request):
         title, amt, why, det, src = _action_text(role, a, cases.get(a["case_id"]))
         return f'<tr><td>{title}</td><td>{tag(a["status"])}</td><td class="muted">{html.escape(a["approved_by"] or "")}</td></tr>'
     n_auto = sum(1 for a in prop if a["proposed_by"] == "autopilot")
-    bulk = (f'<form method="post" action="/autopilot/approve_all"><button class="btn">{svg("check", "2.2")}Approve all routine reminders ({n_auto})</button></form>' if n_auto else "")
+    bulk = (f'<form method="post" action="/autopilot/approve_all"><button class="btn">{svg("check", "2.2")}Approve all routine reminders ({n_auto})</button></form>' if n_auto and not arena_locked(req) else "")
     more = (f'<details class="more"><summary>Show {len(prop) - 20} more</summary><div class="panel" style="margin-top:8px"><div class="list">{"".join(card(a) for a in prop[20:120])}</div></div></details>'
             if len(prop) > 20 else '')
     body = f"""<div class="wrap">{head("Approvals", "Nothing is sent, charged or escalated until you approve it. Each item shows why it was proposed.", bulk)}
@@ -487,6 +514,8 @@ def autopilot(req: Request):
     k = E.kpis() if ran else None
     run = (f'<form method="post" action="/autopilot/run"><button class="btn {"ghost" if ran else ""}">'
            f'{svg("refresh" if ran else "play")}{"Run again" if ran else "Run today&#39;s reminders"}</button></form>')
+    if arena_locked(req):
+        run = '<span class="muted small">Public arena: the autopilot runs on the organisers&#39; schedule.</span>'
     hd = head("Reminder autopilot", "Handles routine overdue-loan reminders and stops for anything sensitive. You approve before anything goes out.", run)
     if not ran:
         body = f"""<div class="wrap">{hd}<div class="panel">{empty('/autopilot', f"{len(cases)} overdue loans in today's extract",
@@ -541,9 +570,16 @@ def _how(k):
       <li>Every decision and approval is written to the <a href="/audit?event=case_evaluated">audit trail</a>.</li>{acc}{saved}</ul></div></details>"""
 
 
+def _arena_blocked(req, role, user, what):
+    C.audit(user, role, "arena_public_blocked", None, {"what": what})
+    return JSONResponse({"error": "arena_public_blocked", "message": f"On the public arena, {what} is not available to teams."}, 403)
+
+
 @app.post("/autopilot/run")
 def autopilot_run(req: Request):
     role, user = need(req)
+    if arena_locked(req):
+        return _arena_blocked(req, role, user, "an on-demand autopilot run")
     if C.ROLES[role]["credit"]:
         E.run(user, role)
     return RedirectResponse("/autopilot", 303)
@@ -552,6 +588,8 @@ def autopilot_run(req: Request):
 @app.post("/autopilot/approve_all")
 def autopilot_approve_all(req: Request):
     role, user = need(req)
+    if arena_locked(req):
+        return _arena_blocked(req, role, user, "bulk approval")
     if C.ROLES[role]["credit"]:
         E.approve_all_straight(user, role)
     return RedirectResponse(req.headers.get("referer") or "/actions", 303)
@@ -590,7 +628,8 @@ def outbox_file(req: Request, name: str):
     if not C.ROLES[role]["credit"] or not p.startswith(os.path.realpath(outbox.OUT)) or not os.path.isfile(p):
         return PlainTextResponse("not found", 404)
     C.audit(user, role, "outbox_file_viewed", name, {})
-    return PlainTextResponse(open(p).read())
+    txt = open(p).read()
+    return PlainTextResponse(C.pseudonymise_query(txt) if team_of(req) else txt)   # arena teams: letters stay pseudonymised
 
 
 # ------------------------------------------------------------------ audit + sources
@@ -802,7 +841,9 @@ from app import api as _api, dashboard as _dash
 _api.install(app)
 if os.environ.get("ARENA_MODE", "1") != "0":   # public "Attack ALFRED" arena (/arena, /v1/arena/*); on by default
     from app import arena as _arena
-    _arena.install(app)
+    _arena.USERS = USERS
+    if not _arena.install(app):
+        _arena = None
 
 
 @app.get("/dashboard", response_class=HTMLResponse)

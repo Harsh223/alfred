@@ -1,12 +1,12 @@
 {
- "passed": 38,
- "total": 38,
- "ts": "2026-11-21T14:49:15",
+ "passed": 60,
+ "total": 60,
+ "ts": "2026-11-21T15:32:11",
  "checks": [
   {
    "test": "register returns a Finance and a Tech key",
    "pass": true,
-   "evidence": "201 team=Arena Check fcfeec"
+   "evidence": "201 team=Arena Check 7a5b21"
   },
   {
    "test": "duplicate team name rejected (case-insensitive)",
@@ -76,17 +76,17 @@
   {
    "test": "security gate recorded for the injection",
    "pass": true,
-   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
+   "evidence": "{'role filter': 2, 'security gate': 1, 'memory poisoning guard': 1, 'human approval required (428)': 1}"
   },
   {
    "test": "role filter recorded for the Tech key",
    "pass": true,
-   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
+   "evidence": "{'role filter': 2, 'security gate': 1, 'memory poisoning guard': 1, 'human approval required (428)': 1}"
   },
   {
    "test": "memory poisoning guard and human-approval layer recorded",
    "pass": true,
-   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
+   "evidence": "{'role filter': 2, 'security gate': 1, 'memory poisoning guard': 1, 'human approval required (428)': 1}"
   },
   {
    "test": "attacks blocked >= 5 and a most-hit layer named",
@@ -141,12 +141,12 @@
   {
    "test": "verdict with admin token -> rejected",
    "pass": true,
-   "evidence": "200 {'id': 'BR-0001', 'team': 'Arena Check fcfeec', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
+   "evidence": "200 {'id': 'BR-0001', 'team': 'Arena Check 7a5b21', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
   },
   {
    "test": "verdict and note visible in the public list",
    "pass": true,
-   "evidence": "{'id': 'BR-0001', 'ts': '2026-11-21 14:48:51', 'team': 'Arena Check fcfeec', 'description': 'Arena check: <CLIENT_0289> appears when I paste my key <API_KEY>', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
+   "evidence": "{'id': 'BR-0001', 'ts': '2026-11-21 15:32:09', 'team': 'Arena Check 7a5b21', 'description': 'Arena check: <CLIENT_0289> appears when I paste my key <API_KEY>', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
   },
   {
    "test": "breach list has no keys and no real names",
@@ -169,7 +169,7 @@
    "evidence": "200 leak=[]"
   },
   {
-   "test": "/arena page shows headline, how to play and the team",
+   "test": "/arena page shows headline, how to play, join form and the team",
    "pass": true,
    "evidence": "200"
   },
@@ -182,6 +182,116 @@
    "test": "login page links to /arena",
    "pass": true,
    "evidence": "200"
+  },
+  {
+   "test": "GUI join via form shows two API keys and both attack buttons",
+   "pass": true,
+   "evidence": "201 keys=2"
+  },
+  {
+   "test": "keys are shown once: not on /arena afterwards",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "GUI join with a taken name is refused with a message",
+   "pass": true,
+   "evidence": "409"
+  },
+  {
+   "test": "keys from the GUI join work on the API",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "'Attack as Finance' signs in with a team badge",
+   "pass": true,
+   "evidence": "200 http://127.0.0.1:8080/today"
+  },
+  {
+   "test": "GUI chat injection blocked",
+   "pass": true,
+   "evidence": "200 denied"
+  },
+  {
+   "test": "GUI pages for a Finance team show no real customer data",
+   "pass": true,
+   "evidence": "leak=[]"
+  },
+  {
+   "test": "switch to Tech within the team session",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "Tech team session: approvals locked",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "Tech team session denied customer credit data in chat",
+   "pass": true,
+   "evidence": "denied"
+  },
+  {
+   "test": "forged team cookie (made-up signature) is rejected",
+   "pass": true,
+   "evidence": "http://127.0.0.1:8080/login"
+  },
+  {
+   "test": "tampered team name with a valid signature is rejected",
+   "pass": true,
+   "evidence": "http://127.0.0.1:8080/login"
+  },
+  {
+   "test": "tampered role (compliance) is rejected",
+   "pass": true,
+   "evidence": "http://127.0.0.1:8080/login"
+  },
+  {
+   "test": "normal demo users without a team still work",
+   "pass": true,
+   "evidence": "http://127.0.0.1:8080/today"
+  },
+  {
+   "test": "GUI attacks attributed to the team on the leaderboard",
+   "pass": true,
+   "evidence": "req=17 {'role filter': 2, 'security gate': 1, 'memory poisoning guard': 1}"
+  },
+  {
+   "test": "GUI team: 0 real-data leaks, 0 unauthorised actions",
+   "pass": true,
+   "evidence": "0 0"
+  },
+  {
+   "test": "forged cookies were not attributed to the victim team",
+   "pass": true,
+   "evidence": "10 -> 10"
+  },
+  {
+   "test": "breach form needs a team session",
+   "pass": true,
+   "evidence": "http://127.0.0.1:8080/arena#join"
+  },
+  {
+   "test": "breach form opens for the team",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "incomplete breach form -> 422 with a message",
+   "pass": true,
+   "evidence": "422"
+  },
+  {
+   "test": "breach form submitted -> listed as submitted for the team",
+   "pass": true,
+   "evidence": "200 http://127.0.0.1:8080/arena?filed=BR-0002#breaches"
+  },
+  {
+   "test": "GUI breach stored like API ones, real name masked",
+   "pass": true,
+   "evidence": "{'id': 'BR-0002', 'ts': '2026-11-21 15:32:11', 'team': 'GUI Check e8fdfc', 'description': 'GUI check: chat showed <CLIENT_0289>?', 'status': 'submitted', 'note': ''}"
   },
   {
    "test": "organiser can remove the test team",

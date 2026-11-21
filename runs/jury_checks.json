@@ -6,7 +6,7 @@
    "id": "A1",
    "check": "Speaks first (brief per role, nobody asked)",
    "pass": true,
-   "evidence": "Today RM 4 cited items, IT 8; morning email has sources: True; audit 'brief generated' by scheduler: True"
+   "evidence": "Today RM 6 cited items, IT 8; morning email has sources: True; audit 'brief generated' by scheduler: True"
   },
   {
    "id": "A2",
@@ -30,7 +30,7 @@
    "id": "A5",
    "check": "Says I don't know for missing data",
    "pass": true,
-   "evidence": "abstain: 'I don't know. There is nothing in the approved kno' | abstain: 'I don't know. The approved sources are not enough ' | abstain: 'I don't know. There is nothing in the approved kno'"
+   "evidence": "abstain: 'I don't know. There is nothing in the approved kno' | abstain: 'I don't know. The approved sources are not enough ' | abstain: 'I don't know. The approved sources are not enough '"
   },
   {
    "id": "A6",
@@ -60,7 +60,7 @@
    "id": "B3",
    "check": "Trail: what, on which input, who approved",
    "pass": true,
-   "evidence": "events ['case_evaluated', 'action_approved', 'action_executed', 'action_approved', 'action_executed']; input row keys ['case_id', 'product', 'days_past_due', 'amount_overdue']; rule '61-90 days: final notice + hand-over to '; model student (0.8s); approved by Anna Ferri at 2026-11-21 14:52:51; output ['letters/A-CASE-0001-1.txt', 'pec_gateway_batch_20261121.csv']"
+   "evidence": "events ['case_evaluated', 'action_approved', 'action_executed', 'action_approved', 'action_executed']; input row keys ['case_id', 'product', 'days_past_due', 'amount_overdue']; rule '61-90 days: final notice + hand-over to '; model student (1.7s); approved by Anna Ferri at 2026-11-21 15:29:26; output ['letters/A-CASE-0001-1.txt', 'pec_gateway_batch_20261121.csv']"
   },
   {
    "id": "D",

@@ -58,3 +58,8 @@ infra/
 llm/boot_*.sh
 llm/jobs_*.sh
 runs/api_before_*.py
+
+# local backups
+runs/*before*.py
+runs/arena.duckdb*
+runs/.api_keys.json
