@@ -47,6 +47,17 @@ raw input ──▶ ① PRIVACY SHIELD (GLiNER-bank + rules) ──▶ DuckDB (m
 | **Guard** Qwen3.5-0.8B | trained on the arena attacks + 4 public injection sets | CPU/GPU | learned attack detector |
 | Teacher Qwen3.8-Flash-Next 180B MoE | — | a multi-GPU server (training time only) | data generation, attacks, judging — **not needed in production** |
 
+### Model weights (Hugging Face)
+All models in one collection: **[ALFRED on Hugging Face](https://huggingface.co/collections/223Harsh/alfred-ai-colleague-for-regulated-banking-6b01aed66fa352a39b5a9573)**
+
+| Model | Link |
+|---|---|
+| Assistant 9B (distilled) | [223Harsh/alfred-assistant-9b](https://huggingface.co/223Harsh/alfred-assistant-9b) |
+| Guard 0.8B (attack detector) | [223Harsh/alfred-guard-0.8b](https://huggingface.co/223Harsh/alfred-guard-0.8b) |
+| Signal reader 0.8B | [223Harsh/alfred-signal-0.8b](https://huggingface.co/223Harsh/alfred-signal-0.8b) |
+| PII GLiNER (bank) | [223Harsh/alfred-pii-gliner](https://huggingface.co/223Harsh/alfred-pii-gliner) |
+| Router (from scratch, 3.1M params) | in this repo: `runs/router.pt` |
+
 ## Results (held-out, all reproducible from this repo)
 | Test | Result |
 |---|---|
