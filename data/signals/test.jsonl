@@ -1,0 +1,280 @@
+{"text": "Buongiorno, Following the death of the account holder, please stop all communications. Could you send me a copy of the contract?\nCordiali saluti,\n<CLIENT_0215>", "label": "deceased_notice"}
+{"text": "Good morning, Can I book an appointment with my advisor next week?\nCordiali saluti,\n<CLIENT_0034>", "label": "no_signal"}
+{"text": "Hello, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0120>", "label": "hardship"}
+{"text": "Buongiorno, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0146>", "label": "hardship"}
+{"text": "Hello, Business is down 60% this quarter, we need to restructure the repayments.\nBest,\n<CLIENT_0268>", "label": "hardship"}
+{"text": "Hello, We moved the company HQ, please update the registered office. What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0013>", "label": "change_of_details"}
+{"text": "Hi, Your reminder letters are harassment. Formal complaint. Thanks for the statement, everything looks fine.\nKind regards,\n<CLIENT_0216>", "label": "complaint"}
+{"text": "Good morning, Salary arrives on the 27th, I'll settle everything then. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0216>", "label": "payment_promise"}
+{"text": "Hi, Can I book an appointment with my advisor next week?\nCordiali saluti,\n<CLIENT_0309>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, We moved the company HQ, please update the registered office.\nGrazie,\n<CLIENT_0287>", "label": "change_of_details"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers.\nRegards,\n<CLIENT_0103>", "label": "dispute"}
+{"text": "Hi, Following the death of the account holder, please stop all communications. Could you send me a copy of the contract?\nRegards,\n<CLIENT_0377>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, We moved the company HQ, please update the registered office.\nKind regards,\n<CLIENT_0101>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, We moved the company HQ, please update the registered office. Grazie per la cortese risposta.\nRegards,\n<CLIENT_0140>", "label": "change_of_details"}
+{"text": "Hi, Following the death of the account holder, please stop all communications.\nRegards,\n<CLIENT_0252>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Business is down 60% this quarter, we need to restructure the repayments.\nKind regards,\n<CLIENT_0113>", "label": "hardship"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments.\nThanks,\n<CLIENT_0093>", "label": "hardship"}
+{"text": "Good morning, Your reminder letters are harassment. Formal complaint.\nCordiali saluti,\n<CLIENT_0109>", "label": "complaint"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0152>", "label": "dispute"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0101>", "label": "dispute"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then.\nGrazie,\n<CLIENT_0285>", "label": "payment_promise"}
+{"text": "Good morning, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nKind regards,\n<CLIENT_0146>", "label": "payment_promise"}
+{"text": "Hi, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0229>", "label": "complaint"}
+{"text": "Good morning, Your reminder letters are harassment. Formal complaint.\nCordiali saluti,\n<CLIENT_0166>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Salary arrives on the 27th, I'll settle everything then. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0044>", "label": "payment_promise"}
+{"text": "Dear Lumen Bank, Business is down 60% this quarter, we need to restructure the repayments.\nKind regards,\n<CLIENT_0290>", "label": "hardship"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0250>", "label": "payment_promise"}
+{"text": "Dear Lumen Bank, Can I book an appointment with my advisor next week? Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0372>", "label": "no_signal"}
+{"text": "Hi, Salary arrives on the 27th, I'll settle everything then.\nRegards,\n<CLIENT_0281>", "label": "payment_promise"}
+{"text": "Business is down 60% this quarter, we need to restructure the repayments.\nKind regards,\n<CLIENT_0297>", "label": "hardship"}
+{"text": "Good morning, Salary arrives on the 27th, I'll settle everything then. Grazie per la cortese risposta.\nRegards,\n<CLIENT_0128>", "label": "payment_promise"}
+{"text": "Good morning, Following the death of the account holder, please stop all communications.\nCordiali saluti,\n<CLIENT_0258>", "label": "deceased_notice"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then.\nCordiali saluti,\n<CLIENT_0122>", "label": "payment_promise"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint. Could you send me a copy of the contract?\nRegards,\n<CLIENT_0396>", "label": "complaint"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office.\nBest,\n<CLIENT_0129>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Following the death of the account holder, please stop all communications. What are your branch opening hours at Christmas?\nThanks,\n<CLIENT_0119>", "label": "deceased_notice"}
+{"text": "We moved the company HQ, please update the registered office.\nRegards,\n<CLIENT_0091>", "label": "change_of_details"}
+{"text": "Following the death of the account holder, please stop all communications.\nRegards,\n<CLIENT_0392>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint.\nRegards,\n<CLIENT_0249>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint.\nGrazie,\n<CLIENT_0382>", "label": "complaint"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers. Grazie per la cortese risposta.\nBest,\n<CLIENT_0348>", "label": "dispute"}
+{"text": "Dear Lumen Bank, Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nCordiali saluti,\n<CLIENT_0018>", "label": "no_signal"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office. Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0399>", "label": "change_of_details"}
+{"text": "Hello, Business is down 60% this quarter, we need to restructure the repayments. Could you send me a copy of the contract?\nBest,\n<CLIENT_0194>", "label": "hardship"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint. Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0063>", "label": "complaint"}
+{"text": "Buongiorno, Following the death of the account holder, please stop all communications. Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0207>", "label": "deceased_notice"}
+{"text": "Hi, Following the death of the account holder, please stop all communications.\nGrazie,\n<CLIENT_0076>", "label": "deceased_notice"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nThanks,\n<CLIENT_0296>", "label": "no_signal"}
+{"text": "Hi, Can I book an appointment with my advisor next week?\nCordiali saluti,\n<CLIENT_0397>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, We moved the company HQ, please update the registered office.\nThanks,\n<CLIENT_0377>", "label": "change_of_details"}
+{"text": "Good morning, We moved the company HQ, please update the registered office. Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0287>", "label": "change_of_details"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint.\nKind regards,\n<CLIENT_0376>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Your statement shows two instalments missing but my bank shows both transfers. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0020>", "label": "dispute"}
+{"text": "Hi, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nKind regards,\n<CLIENT_0331>", "label": "payment_promise"}
+{"text": "We moved the company HQ, please update the registered office. What are your branch opening hours at Christmas?\nCordiali saluti,\n<CLIENT_0110>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, We moved the company HQ, please update the registered office.\nGrazie,\n<CLIENT_0038>", "label": "change_of_details"}
+{"text": "Buongiorno, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nThanks,\n<CLIENT_0071>", "label": "hardship"}
+{"text": "Good morning, Can I book an appointment with my advisor next week?\nRegards,\n<CLIENT_0005>", "label": "no_signal"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers.\nThanks,\n<CLIENT_0062>", "label": "dispute"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nCordiali saluti,\n<CLIENT_0358>", "label": "no_signal"}
+{"text": "Hi, Following the death of the account holder, please stop all communications.\nThanks,\n<CLIENT_0246>", "label": "deceased_notice"}
+{"text": "Hello, Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nCordiali saluti,\n<CLIENT_0064>", "label": "no_signal"}
+{"text": "Hello, Can I book an appointment with my advisor next week? What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0271>", "label": "no_signal"}
+{"text": "Good morning, Can I book an appointment with my advisor next week?\nKind regards,\n<CLIENT_0304>", "label": "no_signal"}
+{"text": "Good morning, Your statement shows two instalments missing but my bank shows both transfers. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0276>", "label": "dispute"}
+{"text": "We moved the company HQ, please update the registered office.\nBest,\n<CLIENT_0108>", "label": "change_of_details"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0341>", "label": "complaint"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers. Thanks for the statement, everything looks fine.\nKind regards,\n<CLIENT_0085>", "label": "dispute"}
+{"text": "Hi, Your reminder letters are harassment. Formal complaint.\nKind regards,\n<CLIENT_0295>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0077>", "label": "deceased_notice"}
+{"text": "Buongiorno, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nCordiali saluti,\n<CLIENT_0050>", "label": "complaint"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments.\nRegards,\n<CLIENT_0041>", "label": "hardship"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nRegards,\n<CLIENT_0086>", "label": "no_signal"}
+{"text": "Buongiorno, Following the death of the account holder, please stop all communications. Thanks for the statement, everything looks fine.\nCordiali saluti,\n<CLIENT_0137>", "label": "deceased_notice"}
+{"text": "We moved the company HQ, please update the registered office.\nGrazie,\n<CLIENT_0196>", "label": "change_of_details"}
+{"text": "Good morning, Your reminder letters are harassment. Formal complaint. Thanks for the statement, everything looks fine.\nCordiali saluti,\n<CLIENT_0373>", "label": "complaint"}
+{"text": "Buongiorno, Business is down 60% this quarter, we need to restructure the repayments. Thanks for the statement, everything looks fine.\nKind regards,\n<CLIENT_0152>", "label": "hardship"}
+{"text": "Good morning, We moved the company HQ, please update the registered office. Could you send me a copy of the contract?\nThanks,\n<CLIENT_0137>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint. Could you send me a copy of the contract?\nRegards,\n<CLIENT_0311>", "label": "complaint"}
+{"text": "Hello, Following the death of the account holder, please stop all communications.\nKind regards,\n<CLIENT_0001>", "label": "deceased_notice"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nThanks,\n<CLIENT_0237>", "label": "no_signal"}
+{"text": "Good morning, Following the death of the account holder, please stop all communications. Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0058>", "label": "deceased_notice"}
+{"text": "Good morning, Salary arrives on the 27th, I'll settle everything then.\nKind regards,\n<CLIENT_0205>", "label": "payment_promise"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then. Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0303>", "label": "payment_promise"}
+{"text": "Dear Lumen Bank, Business is down 60% this quarter, we need to restructure the repayments. Could you send me a copy of the contract?\nGrazie,\n<CLIENT_0210>", "label": "hardship"}
+{"text": "Hi, Salary arrives on the 27th, I'll settle everything then. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0004>", "label": "payment_promise"}
+{"text": "Buongiorno, Your statement shows two instalments missing but my bank shows both transfers. Grazie per la cortese risposta.\nThanks,\n<CLIENT_0095>", "label": "dispute"}
+{"text": "Dear Lumen Bank, Your statement shows two instalments missing but my bank shows both transfers.\nBest,\n<CLIENT_0337>", "label": "dispute"}
+{"text": "Dear Lumen Bank, Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0020>", "label": "no_signal"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint.\nKind regards,\n<CLIENT_0333>", "label": "complaint"}
+{"text": "Buongiorno, Following the death of the account holder, please stop all communications. Could you send me a copy of the contract?\nThanks,\n<CLIENT_0093>", "label": "deceased_notice"}
+{"text": "Good morning, Your reminder letters are harassment. Formal complaint.\nGrazie,\n<CLIENT_0311>", "label": "complaint"}
+{"text": "Buongiorno, Your statement shows two instalments missing but my bank shows both transfers.\nBest,\n<CLIENT_0227>", "label": "dispute"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments. Could you send me a copy of the contract?\nBest,\n<CLIENT_0149>", "label": "hardship"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers. Could you send me a copy of the contract?\nBest,\n<CLIENT_0033>", "label": "dispute"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0050>", "label": "payment_promise"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments. Could you send me a copy of the contract?\nThanks,\n<CLIENT_0104>", "label": "hardship"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nCordiali saluti,\n<CLIENT_0320>", "label": "complaint"}
+{"text": "Following the death of the account holder, please stop all communications. Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0192>", "label": "deceased_notice"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers.\nRegards,\n<CLIENT_0077>", "label": "dispute"}
+{"text": "Hello, We moved the company HQ, please update the registered office. Could you send me a copy of the contract?\nBest,\n<CLIENT_0292>", "label": "change_of_details"}
+{"text": "Good morning, We moved the company HQ, please update the registered office.\nCordiali saluti,\n<CLIENT_0022>", "label": "change_of_details"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers.\nThanks,\n<CLIENT_0162>", "label": "dispute"}
+{"text": "Good morning, We moved the company HQ, please update the registered office.\nThanks,\n<CLIENT_0104>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Your statement shows two instalments missing but my bank shows both transfers. Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0249>", "label": "dispute"}
+{"text": "Good morning, Business is down 60% this quarter, we need to restructure the repayments. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0316>", "label": "hardship"}
+{"text": "Good morning, We moved the company HQ, please update the registered office.\nCordiali saluti,\n<CLIENT_0217>", "label": "change_of_details"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint.\nBest,\n<CLIENT_0049>", "label": "complaint"}
+{"text": "Buongiorno, Your reminder letters are harassment. Formal complaint. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0298>", "label": "complaint"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nBest,\n<CLIENT_0035>", "label": "hardship"}
+{"text": "Good morning, Your statement shows two instalments missing but my bank shows both transfers.\nCordiali saluti,\n<CLIENT_0159>", "label": "dispute"}
+{"text": "Buongiorno, Business is down 60% this quarter, we need to restructure the repayments.\nKind regards,\n<CLIENT_0095>", "label": "hardship"}
+{"text": "Hello, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nBest,\n<CLIENT_0132>", "label": "hardship"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nBest,\n<CLIENT_0310>", "label": "no_signal"}
+{"text": "Hi, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0341>", "label": "deceased_notice"}
+{"text": "Hello, Following the death of the account holder, please stop all communications.\nCordiali saluti,\n<CLIENT_0051>", "label": "deceased_notice"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0098>", "label": "payment_promise"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0102>", "label": "payment_promise"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then.\nGrazie,\n<CLIENT_0279>", "label": "payment_promise"}
+{"text": "We moved the company HQ, please update the registered office.\nRegards,\n<CLIENT_0108>", "label": "change_of_details"}
+{"text": "Buongiorno, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nCordiali saluti,\n<CLIENT_0100>", "label": "deceased_notice"}
+{"text": "Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0173>", "label": "hardship"}
+{"text": "Hi, Salary arrives on the 27th, I'll settle everything then.\nRegards,\n<CLIENT_0163>", "label": "payment_promise"}
+{"text": "Good morning, Following the death of the account holder, please stop all communications.\nKind regards,\n<CLIENT_0390>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0139>", "label": "payment_promise"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week? What are your branch opening hours at Christmas?\nGrazie,\n<CLIENT_0041>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, Your statement shows two instalments missing but my bank shows both transfers. Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0299>", "label": "dispute"}
+{"text": "Good morning, We moved the company HQ, please update the registered office. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0182>", "label": "change_of_details"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nKind regards,\n<CLIENT_0326>", "label": "no_signal"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0044>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0293>", "label": "complaint"}
+{"text": "Hi, Can I book an appointment with my advisor next week?\nBest,\n<CLIENT_0070>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0014>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Your statement shows two instalments missing but my bank shows both transfers.\nThanks,\n<CLIENT_0086>", "label": "dispute"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint.\nBest,\n<CLIENT_0182>", "label": "complaint"}
+{"text": "Hello, Can I book an appointment with my advisor next week?\nThanks,\n<CLIENT_0249>", "label": "no_signal"}
+{"text": "Hi, Your reminder letters are harassment. Formal complaint. Thanks for the statement, everything looks fine.\nCordiali saluti,\n<CLIENT_0011>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Following the death of the account holder, please stop all communications.\nBest,\n<CLIENT_0364>", "label": "deceased_notice"}
+{"text": "Hello, We moved the company HQ, please update the registered office. Grazie per la cortese risposta.\nThanks,\n<CLIENT_0014>", "label": "change_of_details"}
+{"text": "Hello, Following the death of the account holder, please stop all communications.\nGrazie,\n<CLIENT_0238>", "label": "deceased_notice"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments.\nKind regards,\n<CLIENT_0066>", "label": "hardship"}
+{"text": "Hello, Can I book an appointment with my advisor next week?\nKind regards,\n<CLIENT_0264>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nCordiali saluti,\n<CLIENT_0032>", "label": "complaint"}
+{"text": "Dear Lumen Bank, We moved the company HQ, please update the registered office.\nKind regards,\n<CLIENT_0041>", "label": "change_of_details"}
+{"text": "Salary arrives on the 27th, I'll settle everything then.\nGrazie,\n<CLIENT_0266>", "label": "payment_promise"}
+{"text": "Business is down 60% this quarter, we need to restructure the repayments.\nKind regards,\n<CLIENT_0381>", "label": "hardship"}
+{"text": "Good morning, We moved the company HQ, please update the registered office. Grazie per la cortese risposta.\nRegards,\n<CLIENT_0312>", "label": "change_of_details"}
+{"text": "Buongiorno, Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0219>", "label": "dispute"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nGrazie,\n<CLIENT_0350>", "label": "no_signal"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then. Could you send me a copy of the contract?\nRegards,\n<CLIENT_0392>", "label": "payment_promise"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nCordiali saluti,\n<CLIENT_0100>", "label": "hardship"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office. Could you send me a copy of the contract?\nCordiali saluti,\n<CLIENT_0324>", "label": "change_of_details"}
+{"text": "Good morning, Business is down 60% this quarter, we need to restructure the repayments.\nGrazie,\n<CLIENT_0101>", "label": "hardship"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then.\nGrazie,\n<CLIENT_0111>", "label": "payment_promise"}
+{"text": "Hello, Business is down 60% this quarter, we need to restructure the repayments.\nRegards,\n<CLIENT_0050>", "label": "hardship"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0175>", "label": "payment_promise"}
+{"text": "Dear Lumen Bank, Following the death of the account holder, please stop all communications.\nGrazie,\n<CLIENT_0265>", "label": "deceased_notice"}
+{"text": "Hi, We moved the company HQ, please update the registered office.\nCordiali saluti,\n<CLIENT_0285>", "label": "change_of_details"}
+{"text": "Good morning, Salary arrives on the 27th, I'll settle everything then. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0061>", "label": "payment_promise"}
+{"text": "Hi, Can I book an appointment with my advisor next week?\nKind regards,\n<CLIENT_0144>", "label": "no_signal"}
+{"text": "Following the death of the account holder, please stop all communications. What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0202>", "label": "deceased_notice"}
+{"text": "Buongiorno, Following the death of the account holder, please stop all communications. Could you send me a copy of the contract?\nRegards,\n<CLIENT_0130>", "label": "deceased_notice"}
+{"text": "Good morning, Business is down 60% this quarter, we need to restructure the repayments.\nGrazie,\n<CLIENT_0365>", "label": "hardship"}
+{"text": "Buongiorno, Your statement shows two instalments missing but my bank shows both transfers.\nKind regards,\n<CLIENT_0361>", "label": "dispute"}
+{"text": "Good morning, Following the death of the account holder, please stop all communications.\nBest,\n<CLIENT_0068>", "label": "deceased_notice"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then. What are your branch opening hours at Christmas?\nCordiali saluti,\n<CLIENT_0015>", "label": "payment_promise"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers. Grazie per la cortese risposta.\nBest,\n<CLIENT_0027>", "label": "dispute"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nCordiali saluti,\n<CLIENT_0325>", "label": "dispute"}
+{"text": "Dear Lumen Bank, We moved the company HQ, please update the registered office. Grazie per la cortese risposta.\nCordiali saluti,\n<CLIENT_0017>", "label": "change_of_details"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments.\nBest,\n<CLIENT_0321>", "label": "hardship"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers. Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0010>", "label": "dispute"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers.\nBest,\n<CLIENT_0354>", "label": "dispute"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint.\nThanks,\n<CLIENT_0121>", "label": "complaint"}
+{"text": "Can I book an appointment with my advisor next week?\nThanks,\n<CLIENT_0256>", "label": "no_signal"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then.\nGrazie,\n<CLIENT_0092>", "label": "payment_promise"}
+{"text": "Good morning, We moved the company HQ, please update the registered office. Could you send me a copy of the contract?\nGrazie,\n<CLIENT_0137>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0125>", "label": "complaint"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week? Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0105>", "label": "no_signal"}
+{"text": "Buongiorno, Business is down 60% this quarter, we need to restructure the repayments.\nThanks,\n<CLIENT_0332>", "label": "hardship"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0282>", "label": "payment_promise"}
+{"text": "Hello, We moved the company HQ, please update the registered office. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0227>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint. Could you send me a copy of the contract?\nGrazie,\n<CLIENT_0313>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Following the death of the account holder, please stop all communications. Could you send me a copy of the contract?\nThanks,\n<CLIENT_0294>", "label": "deceased_notice"}
+{"text": "Can I book an appointment with my advisor next week?\nRegards,\n<CLIENT_0050>", "label": "no_signal"}
+{"text": "Business is down 60% this quarter, we need to restructure the repayments. What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0300>", "label": "hardship"}
+{"text": "Buongiorno, Your statement shows two instalments missing but my bank shows both transfers.\nGrazie,\n<CLIENT_0055>", "label": "dispute"}
+{"text": "Dear Lumen Bank, Following the death of the account holder, please stop all communications.\nKind regards,\n<CLIENT_0285>", "label": "deceased_notice"}
+{"text": "Hello, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0031>", "label": "deceased_notice"}
+{"text": "Business is down 60% this quarter, we need to restructure the repayments.\nCordiali saluti,\n<CLIENT_0183>", "label": "hardship"}
+{"text": "Hello, Can I book an appointment with my advisor next week? Thanks for the statement, everything looks fine.\nKind regards,\n<CLIENT_0370>", "label": "no_signal"}
+{"text": "Buongiorno, Your reminder letters are harassment. Formal complaint. Grazie per la cortese risposta.\nRegards,\n<CLIENT_0015>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Salary arrives on the 27th, I'll settle everything then. Could you send me a copy of the contract?\nCordiali saluti,\n<CLIENT_0099>", "label": "payment_promise"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0319>", "label": "dispute"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then.\nBest,\n<CLIENT_0032>", "label": "payment_promise"}
+{"text": "Buongiorno, Your statement shows two instalments missing but my bank shows both transfers. Could you send me a copy of the contract?\nBest,\n<CLIENT_0018>", "label": "dispute"}
+{"text": "Dear Lumen Bank, Salary arrives on the 27th, I'll settle everything then.\nCordiali saluti,\n<CLIENT_0282>", "label": "payment_promise"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nKind regards,\n<CLIENT_0078>", "label": "no_signal"}
+{"text": "Buongiorno, Can I book an appointment with my advisor next week?\nThanks,\n<CLIENT_0376>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint.\nThanks,\n<CLIENT_0392>", "label": "complaint"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers. Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0029>", "label": "dispute"}
+{"text": "Hi, Salary arrives on the 27th, I'll settle everything then.\nBest,\n<CLIENT_0239>", "label": "payment_promise"}
+{"text": "Hello, We moved the company HQ, please update the registered office.\nRegards,\n<CLIENT_0088>", "label": "change_of_details"}
+{"text": "Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0017>", "label": "deceased_notice"}
+{"text": "Buongiorno, Business is down 60% this quarter, we need to restructure the repayments.\nCordiali saluti,\n<CLIENT_0223>", "label": "hardship"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office.\nCordiali saluti,\n<CLIENT_0009>", "label": "change_of_details"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office.\nThanks,\n<CLIENT_0184>", "label": "change_of_details"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then.\nKind regards,\n<CLIENT_0240>", "label": "payment_promise"}
+{"text": "Buongiorno, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nCordiali saluti,\n<CLIENT_0010>", "label": "hardship"}
+{"text": "Good morning, We moved the company HQ, please update the registered office.\nRegards,\n<CLIENT_0119>", "label": "change_of_details"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office. Grazie per la cortese risposta.\nThanks,\n<CLIENT_0277>", "label": "change_of_details"}
+{"text": "Hi, We moved the company HQ, please update the registered office. Thanks for the statement, everything looks fine.\nBest,\n<CLIENT_0068>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Business is down 60% this quarter, we need to restructure the repayments.\nCordiali saluti,\n<CLIENT_0070>", "label": "hardship"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers.\nThanks,\n<CLIENT_0290>", "label": "dispute"}
+{"text": "Hi, Following the death of the account holder, please stop all communications. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0167>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Can I book an appointment with my advisor next week?\nCordiali saluti,\n<CLIENT_0271>", "label": "no_signal"}
+{"text": "Good morning, We moved the company HQ, please update the registered office. Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0176>", "label": "change_of_details"}
+{"text": "Your reminder letters are harassment. Formal complaint.\nRegards,\n<CLIENT_0103>", "label": "complaint"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then.\nGrazie,\n<CLIENT_0257>", "label": "payment_promise"}
+{"text": "Hello, We moved the company HQ, please update the registered office. Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0202>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Your statement shows two instalments missing but my bank shows both transfers.\nCordiali saluti,\n<CLIENT_0324>", "label": "dispute"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then.\nBest,\n<CLIENT_0319>", "label": "payment_promise"}
+{"text": "Good morning, We moved the company HQ, please update the registered office.\nThanks,\n<CLIENT_0014>", "label": "change_of_details"}
+{"text": "Good morning, Following the death of the account holder, please stop all communications.\nGrazie,\n<CLIENT_0167>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Your statement shows two instalments missing but my bank shows both transfers.\nKind regards,\n<CLIENT_0319>", "label": "dispute"}
+{"text": "Hi, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nThanks,\n<CLIENT_0135>", "label": "deceased_notice"}
+{"text": "Following the death of the account holder, please stop all communications.\nKind regards,\n<CLIENT_0395>", "label": "deceased_notice"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office.\nThanks,\n<CLIENT_0028>", "label": "change_of_details"}
+{"text": "Dear Lumen Bank, Business is down 60% this quarter, we need to restructure the repayments.\nThanks,\n<CLIENT_0107>", "label": "hardship"}
+{"text": "Your reminder letters are harassment. Formal complaint. Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0368>", "label": "complaint"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0146>", "label": "complaint"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers. Grazie per la cortese risposta.\nGrazie,\n<CLIENT_0153>", "label": "dispute"}
+{"text": "Good morning, Business is down 60% this quarter, we need to restructure the repayments. Could you send me a copy of the contract?\nThanks,\n<CLIENT_0048>", "label": "hardship"}
+{"text": "Hi, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0043>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint. Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0147>", "label": "complaint"}
+{"text": "Hello, Your statement shows two instalments missing but my bank shows both transfers.\nKind regards,\n<CLIENT_0181>", "label": "dispute"}
+{"text": "Can I book an appointment with my advisor next week?\nThanks,\n<CLIENT_0165>", "label": "no_signal"}
+{"text": "Buongiorno, Your reminder letters are harassment. Formal complaint.\nThanks,\n<CLIENT_0083>", "label": "complaint"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then.\nKind regards,\n<CLIENT_0268>", "label": "payment_promise"}
+{"text": "Buongiorno, We moved the company HQ, please update the registered office.\nKind regards,\n<CLIENT_0038>", "label": "change_of_details"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0355>", "label": "dispute"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nGrazie,\n<CLIENT_0350>", "label": "dispute"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint. What are your branch opening hours at Christmas?\nGrazie,\n<CLIENT_0055>", "label": "complaint"}
+{"text": "Hi, Following the death of the account holder, please stop all communications.\nGrazie,\n<CLIENT_0336>", "label": "deceased_notice"}
+{"text": "Hi, Can I book an appointment with my advisor next week?\nThanks,\n<CLIENT_0082>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, Salary arrives on the 27th, I'll settle everything then. What are your branch opening hours at Christmas?\nRegards,\n<CLIENT_0249>", "label": "payment_promise"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments.\nBest,\n<CLIENT_0314>", "label": "hardship"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint.\nCordiali saluti,\n<CLIENT_0101>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Business is down 60% this quarter, we need to restructure the repayments. Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0353>", "label": "hardship"}
+{"text": "Following the death of the account holder, please stop all communications. Thanks for the statement, everything looks fine.\nGrazie,\n<CLIENT_0056>", "label": "deceased_notice"}
+{"text": "Dear Lumen Bank, Salary arrives on the 27th, I'll settle everything then.\nGrazie,\n<CLIENT_0316>", "label": "payment_promise"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then.\nBest,\n<CLIENT_0289>", "label": "payment_promise"}
+{"text": "Dear Lumen Bank, Business is down 60% this quarter, we need to restructure the repayments.\nThanks,\n<CLIENT_0127>", "label": "hardship"}
+{"text": "Hello, Salary arrives on the 27th, I'll settle everything then. What are your branch opening hours at Christmas?\nGrazie,\n<CLIENT_0066>", "label": "payment_promise"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers. Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0074>", "label": "dispute"}
+{"text": "Hi, Your reminder letters are harassment. Formal complaint.\nThanks,\n<CLIENT_0211>", "label": "complaint"}
+{"text": "Dear Lumen Bank, Your reminder letters are harassment. Formal complaint.\nRegards,\n<CLIENT_0271>", "label": "complaint"}
+{"text": "Good morning, Salary arrives on the 27th, I'll settle everything then. Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0007>", "label": "payment_promise"}
+{"text": "Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nGrazie,\n<CLIENT_0178>", "label": "no_signal"}
+{"text": "Hi, Your statement shows two instalments missing but my bank shows both transfers. Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0344>", "label": "dispute"}
+{"text": "Dear Lumen Bank, Can I book an appointment with my advisor next week? What are your branch opening hours at Christmas?\nBest,\n<CLIENT_0029>", "label": "no_signal"}
+{"text": "Buongiorno, Your statement shows two instalments missing but my bank shows both transfers. Grazie per la cortese risposta.\nKind regards,\n<CLIENT_0019>", "label": "dispute"}
+{"text": "Hello, Following the death of the account holder, please stop all communications.\nGrazie,\n<CLIENT_0374>", "label": "deceased_notice"}
+{"text": "Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nGrazie,\n<CLIENT_0053>", "label": "no_signal"}
+{"text": "We moved the company HQ, please update the registered office.\nCordiali saluti,\n<CLIENT_0021>", "label": "change_of_details"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers.\nCordiali saluti,\n<CLIENT_0318>", "label": "dispute"}
+{"text": "Your statement shows two instalments missing but my bank shows both transfers. What are your branch opening hours at Christmas?\nCordiali saluti,\n<CLIENT_0280>", "label": "dispute"}
+{"text": "Hi, Can I book an appointment with my advisor next week? Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0190>", "label": "no_signal"}
+{"text": "Hi, Following the death of the account holder, please stop all communications. Thanks for the statement, everything looks fine.\nThanks,\n<CLIENT_0272>", "label": "deceased_notice"}
+{"text": "Good morning, Business is down 60% this quarter, we need to restructure the repayments. Thanks for the statement, everything looks fine.\nRegards,\n<CLIENT_0344>", "label": "hardship"}
+{"text": "Good morning, Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0186>", "label": "no_signal"}
+{"text": "Dear Lumen Bank, Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nRegards,\n<CLIENT_0273>", "label": "no_signal"}
+{"text": "Good morning, Business is down 60% this quarter, we need to restructure the repayments.\nBest,\n<CLIENT_0048>", "label": "hardship"}
+{"text": "Hello, Your reminder letters are harassment. Formal complaint. Grazie per la cortese risposta.\nThanks,\n<CLIENT_0352>", "label": "complaint"}
+{"text": "Hello, Can I book an appointment with my advisor next week? Thanks for the statement, everything looks fine.\nCordiali saluti,\n<CLIENT_0122>", "label": "no_signal"}
+{"text": "Hello, Can I book an appointment with my advisor next week?\nKind regards,\n<CLIENT_0392>", "label": "no_signal"}
+{"text": "Good morning, Your reminder letters are harassment. Formal complaint. Grazie per la cortese risposta.\nCordiali saluti,\n<CLIENT_0332>", "label": "complaint"}
+{"text": "Buongiorno, Salary arrives on the 27th, I'll settle everything then.\nBest,\n<CLIENT_0260>", "label": "payment_promise"}
+{"text": "Good morning, Can I book an appointment with my advisor next week? Could you send me a copy of the contract?\nKind regards,\n<CLIENT_0313>", "label": "no_signal"}
+{"text": "Buongiorno, Following the death of the account holder, please stop all communications. Grazie per la cortese risposta.\nRegards,\n<CLIENT_0142>", "label": "deceased_notice"}
+{"text": "Hi, Business is down 60% this quarter, we need to restructure the repayments. Grazie per la cortese risposta.\nCordiali saluti,\n<CLIENT_0048>", "label": "hardship"}

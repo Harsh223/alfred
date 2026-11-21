@@ -1,0 +1,37 @@
+{
+ "params": 3146022,
+ "train_rows": 9528,
+ "train_seconds": 6.2,
+ "acc_heldout_templates": 0.7,
+ "acc_heldout_llm_written": 0.5537,
+ "acc_human_written": 0.8649,
+ "n_human": 37,
+ "ms_per_query_cpu": 0.15,
+ "errors": [
+  [
+   "do I have stuff to approve",
+   "my_work",
+   "action"
+  ],
+  [
+   "max rata reddito mutui?",
+   "knowledge",
+   "my_work"
+  ],
+  [
+   "thanks that's great",
+   "help",
+   "out_of_scope"
+  ],
+  [
+   "how do I approve things here?",
+   "help",
+   "knowledge"
+  ],
+  [
+   "price of gold today?",
+   "out_of_scope",
+   "my_work"
+  ]
+ ]
+}

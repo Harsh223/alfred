@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08">
+ <BkToCstmrDbtCdtNtfctn>
+  <GrpHdr><MsgId>LUMCAMT05420261120</MsgId><CreDtTm>2026-11-20T18:30:00+01:00</CreDtTm></GrpHdr>
+  <Ntfctn>
+   <Id>NTF20261120</Id>
+   <CreDtTm>2026-11-20T18:30:00+01:00</CreDtTm>
+   <Acct><Id><IBAN>IT45S9902101000000000990100</IBAN></Id><Ccy>EUR</Ccy><Ownr><Nm>Lumen Bank S.p.A. - conto incassi finanziamenti</Nm></Ownr></Acct>
+   <Ntry>
+    <NtryRef>860</NtryRef>
+    <Amt Ccy="EUR">78.84</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-20</Dt></BookgDt>
+    <ValDt><Dt>2026-11-20</Dt></ValDt>
+    <AcctSvcrRef>LUM20261120000860</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261120000860</AcctSvcrRef><EndToEndId>E2E1231988825</EndToEndId></Refs>
+     <Amt Ccy="EUR">78.84</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Pasqual Ubaldi</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT64P9905801001775311136211</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>pagamento in acconto, il resto a fine mese</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>861</NtryRef>
+    <Amt Ccy="EUR">60.26</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-20</Dt></BookgDt>
+    <ValDt><Dt>2026-11-20</Dt></ValDt>
+    <AcctSvcrRef>LUM20261120000861</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261120000861</AcctSvcrRef><EndToEndId>E2E4918716981</EndToEndId></Refs>
+     <Amt Ccy="EUR">60.26</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Giuliana Dandolo</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT14H9902101000877463241775</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>acconto rata PRE-2021-01779</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+  </Ntfctn>
+ </BkToCstmrDbtCdtNtfctn>
+</Document>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08">
+ <BkToCstmrDbtCdtNtfctn>
+  <GrpHdr><MsgId>LUMCAMT05420261018</MsgId><CreDtTm>2026-10-18T18:30:00+01:00</CreDtTm></GrpHdr>
+  <Ntfctn>
+   <Id>NTF20261018</Id>
+   <CreDtTm>2026-10-18T18:30:00+01:00</CreDtTm>
+   <Acct><Id><IBAN>IT45S9902101000000000990100</IBAN></Id><Ccy>EUR</Ccy><Ownr><Nm>Lumen Bank S.p.A. - conto incassi finanziamenti</Nm></Ownr></Acct>
+   <Ntry>
+    <NtryRef>28</NtryRef>
+    <Amt Ccy="EUR">1187.03</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000028</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000028</AcctSvcrRef><EndToEndId>E2E9125018927</EndToEndId></Refs>
+     <Amt Ccy="EUR">1187.03</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Nanni Palazzo</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT24V9906301005977644285141</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>/RFB/MUT-2019-00029</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>29</NtryRef>
+    <Amt Ccy="EUR">857.24</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000029</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000029</AcctSvcrRef><EndToEndId>E2E2155215799</EndToEndId></Refs>
+     <Amt Ccy="EUR">857.24</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Margherita Tropea</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT10F9904701001573980984136</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>Rata n. 87 finanziamento MUT-2022-00278</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>30</NtryRef>
+    <Amt Ccy="EUR">267.72</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000030</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000030</AcctSvcrRef><EndToEndId>E2E3886224360</EndToEndId></Refs>
+     <Amt Ccy="EUR">267.72</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Oreste Pucci</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT93I9905810200733402485029</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>/RFB/PRE-2024-00315</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>31</NtryRef>
+    <Amt Ccy="EUR">627.79</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000031</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000031</AcctSvcrRef><EndToEndId>E2E9476036184</EndToEndId></Refs>
+     <Amt Ccy="EUR">627.79</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Lisa Torlonia</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT73D9903410200045804926443</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>pagamento rata october PRE-2026-01309</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>32</NtryRef>
+    <Amt Ccy="EUR">921.86</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000032</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000032</AcctSvcrRef><EndToEndId>E2E5851745175</EndToEndId></Refs>
+     <Amt Ccy="EUR">921.86</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Ezio Valmarana</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT11Z9906301010338858114345</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>RATA MUT-2021-01439 10/2026</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>33</NtryRef>
+    <Amt Ccy="EUR">1660.84</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000033</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000033</AcctSvcrRef><EndToEndId>E2E4063170311</EndToEndId></Refs>
+     <Amt Ccy="EUR">1660.84</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Greca Gaiatto</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT21E9906301001136582706998</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>pagamento rata october MUT-2019-01562</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>34</NtryRef>
+    <Amt Ccy="EUR">255.68</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000034</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000034</AcctSvcrRef><EndToEndId>E2E5908347476</EndToEndId></Refs>
+     <Amt Ccy="EUR">255.68</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Pasqual Bertoli</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT64S9903446100510975930135</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>/RFB/PRE-2025-01567</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>35</NtryRef>
+    <Amt Ccy="EUR">329.14</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-17</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000035</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000035</AcctSvcrRef><EndToEndId>E2E9257860266</EndToEndId></Refs>
+     <Amt Ccy="EUR">329.14</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Pasqual Bertoli</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT64S9903446100510975930135</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>RATA MUT-2023-01568 10/2026</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>36</NtryRef>
+    <Amt Ccy="EUR">1421.21</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000036</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000036</AcctSvcrRef><EndToEndId>E2E9077885866</EndToEndId></Refs>
+     <Amt Ccy="EUR">1421.21</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Alina Ortese</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT13I9905801000897490496876</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>RATA PRE-2025-02189 10/2026</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>37</NtryRef>
+    <Amt Ccy="EUR">340.63</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-17</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000037</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000037</AcctSvcrRef><EndToEndId>E2E8766825444</EndToEndId></Refs>
+     <Amt Ccy="EUR">340.63</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Raimondo Montanariello</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT02Y9903446100351193218675</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>RATA PRE-2025-02309 10/2026</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>38</NtryRef>
+    <Amt Ccy="EUR">676.93</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000038</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000038</AcctSvcrRef><EndToEndId>E2E7436139635</EndToEndId></Refs>
+     <Amt Ccy="EUR">676.93</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Patrizio Vasari</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT38H9903401005326702298470</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>Rata n. 32 finanziamento MUT-2025-02463</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>39</NtryRef>
+    <Amt Ccy="EUR">182.76</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-17</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000039</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000039</AcctSvcrRef><EndToEndId>E2E3905135231</EndToEndId></Refs>
+     <Amt Ccy="EUR">182.76</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Piermaria Tomaselli</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT32B9903446100908295290041</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>Rata n. 43 finanziamento PRE-2021-02753</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>40</NtryRef>
+    <Amt Ccy="EUR">148.90</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-10-18</Dt></BookgDt>
+    <ValDt><Dt>2026-10-18</Dt></ValDt>
+    <AcctSvcrRef>LUM20261018000040</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261018000040</AcctSvcrRef><EndToEndId>E2E6538178342</EndToEndId></Refs>
+     <Amt Ccy="EUR">148.90</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Luigina Ajello</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT02H9906301100077201825188</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>Rata n. 3 finanziamento PRE-2022-02834</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+  </Ntfctn>
+ </BkToCstmrDbtCdtNtfctn>
+</Document>

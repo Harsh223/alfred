@@ -1,0 +1,8 @@
+{
+ "extract_facts.valid_json": 1.0,
+ "extract_facts.key_recall": 1.0,
+ "latency_s": 3.7907,
+ "n": 80,
+ "model": "student_v2",
+ "tag": "extract_fixed_student_v2"
+}

@@ -1,0 +1,8 @@
+{
+ "signal.exact": 0.35,
+ "signal.contains": 0.35,
+ "latency_s": 0.2298,
+ "n": 280,
+ "model": "tiny_base",
+ "tag": "signal_0.8b_base"
+}

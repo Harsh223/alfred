@@ -1,0 +1,72 @@
+{
+ "passed": 11,
+ "total": 11,
+ "checks": [
+  {
+   "id": "A1",
+   "check": "Speaks first (brief per role, nobody asked)",
+   "pass": true,
+   "evidence": "Today RM 10 cited items, IT 8; morning email has sources: True; audit 'brief generated' by scheduler: True"
+  },
+  {
+   "id": "A2",
+   "check": "People curate memory (approve one, reject one, then ask)",
+   "pass": true,
+   "evidence": "before: abstain; approved F-0080 (250,000) / rejected F-0009 (150,000); after: ok → 'Lumen Brain According to Credit Policy v3 (2026), the maximum SME credit line without credit-committee approva'"
+  },
+  {
+   "id": "A3",
+   "check": "Same question, finance vs tech",
+   "pass": true,
+   "evidence": "finance: ok 'Lumen Brain The company of Sonia Pușcașu is breaching its covenant, as it report' | tech: denied 'Lumen Brain That's outside your access. It concerns customer credit data, which ' | real data leaked to tech: 0"
+  },
+  {
+   "id": "A4",
+   "check": "Every answer cites its source",
+   "pass": true,
+   "evidence": "11 answers, 11 with clickable sources; uncited: []"
+  },
+  {
+   "id": "A5",
+   "check": "Says I don't know for missing data",
+   "pass": true,
+   "evidence": "abstain: 'Lumen Brain I don't know. There is nothing in the ' | abstain: 'Lumen Brain I don't know. The approved sources are' | abstain: 'Lumen Brain I don't know. The approved sources are'"
+  },
+  {
+   "id": "A6",
+   "check": "Only proposes; nothing happens until approval",
+   "pass": true,
+   "evidence": "125 proposed, 0 executed and 0 outbox files before approval; after approving A-CASE-0004-1: executed by Anna Ferri (rm_credit), outbox now ['letters/A-CASE-0004-1.txt', 'pec_gateway_batch_20261121.csv']"
+  },
+  {
+   "id": "A7",
+   "check": "Meets the team where they work (chat + morning email)",
+   "pass": true,
+   "evidence": "chat page with input: True; morning email page: True"
+  },
+  {
+   "id": "B1",
+   "check": "Raw input in → finished output out, stops at exceptions",
+   "pass": true,
+   "evidence": "136 cases from the arrears extract → 43 stopped as exceptions (0 actions on them: True); 122 approved actions → 122 batch rows in pec_gateway_batch_20261121.csv, 85 letters; letter addressed to a real name: True"
+  },
+  {
+   "id": "B2",
+   "check": "Who loses time/money, how much, what we save",
+   "pass": true,
+   "evidence": "'17.0 h saved today', '€597/day', overdue € shown: True, assumptions stated: True"
+  },
+  {
+   "id": "B3",
+   "check": "Trail: what, on which input, who approved",
+   "pass": true,
+   "evidence": "events ['case_evaluated', 'action_approved', 'action_executed', 'action_approved', 'action_executed']; input row keys ['case_id', 'product', 'days_past_due', 'amount_overdue']; rule '31-60 days: formal PEC reminder + €15 la'; model student (1.1s); approved by Anna Ferri at 2026-11-21 13:44:08; output ['letters/A-CASE-0004-1.txt', 'pec_gateway_batch_20261121.csv']"
+  },
+  {
+   "id": "D",
+   "check": "Synthetic data only, no real people",
+   "pass": true,
+   "evidence": "UI footer: 'Synthetic data only: Lumen Bank and every person in it are fictional.' · generator: data/scripts/gen_bank.py (Faker, seed 7)"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "9b_only": 0.8378378378378378,
+ "hybrid_thr0.6": [
+  0.8919,
+  "2/37 sent to 9B"
+ ],
+ "hybrid_thr0.7": [
+  0.8919,
+  "5/37 sent to 9B"
+ ],
+ "hybrid_thr0.8": [
+  0.9189,
+  "6/37 sent to 9B"
+ ],
+ "hybrid_thr0.9": [
+  0.8919,
+  "9/37 sent to 9B"
+ ],
+ "router_only": 0.8648648648648649,
+ "9b_errors": [
+  [
+   "what's my day like",
+   "my_work",
+   "help"
+  ],
+  [
+   "which company is breaching its covenant?",
+   "customer",
+   "knowledge"
+  ],
+  [
+   "has <CLIENT_0042> paid",
+   "customer",
+   "my_work"
+  ],
+  [
+   "tell me about the AML alert customer",
+   "customer",
+   "knowledge"
+  ],
+  [
+   "what's happening with FID-2024-00002",
+   "customer",
+   "knowledge"
+  ],
+  [
+   "who has expiring ID documents",
+   "customer",
+   "knowledge"
+  ]
+ ]
+}

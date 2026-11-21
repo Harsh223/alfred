@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08">
+ <BkToCstmrDbtCdtNtfctn>
+  <GrpHdr><MsgId>LUMCAMT05420261114</MsgId><CreDtTm>2026-11-14T18:30:00+01:00</CreDtTm></GrpHdr>
+  <Ntfctn>
+   <Id>NTF20261114</Id>
+   <CreDtTm>2026-11-14T18:30:00+01:00</CreDtTm>
+   <Acct><Id><IBAN>IT45S9902101000000000990100</IBAN></Id><Ccy>EUR</Ccy><Ownr><Nm>Lumen Bank S.p.A. - conto incassi finanziamenti</Nm></Ownr></Acct>
+   <Ntry>
+    <NtryRef>699</NtryRef>
+    <Amt Ccy="EUR">272.73</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-14</Dt></BookgDt>
+    <ValDt><Dt>2026-11-14</Dt></ValDt>
+    <AcctSvcrRef>LUM20261114000699</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261114000699</AcctSvcrRef><EndToEndId>E2E7268164046</EndToEndId></Refs>
+     <Amt Ccy="EUR">272.73</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Maria Trillini</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT19X9902110200434803263340</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>acconto rata PRE-2025-01199</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+  </Ntfctn>
+ </BkToCstmrDbtCdtNtfctn>
+</Document>

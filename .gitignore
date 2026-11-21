@@ -1,0 +1,60 @@
+# --- secrets: NEVER commit
+.env
+*.env
+runs/.*
+**/.secrets*
+**/*token*
+!**/*tokenizer*
+
+# --- environments / caches
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+
+# --- large or regenerable artefacts
+runs/*.duckdb
+runs/*.duckdb.wal
+runs/**/*.duckdb
+runs/**/*.duckdb.wal
+runs/code.tgz
+runs/logs/
+runs/outbox/
+runs/gate/
+runs/scale10/
+runs/realism/bank.duckdb
+runs/redteam*/i80*/
+runs/redteam*/raw.jsonl
+runs/cj.txt
+runs/main_before_*.py
+runs/ui_before_*.py
+runs/workspace_spans.jsonl
+data/*.duckdb.wal
+video/remotion/out/
+video/remotion/public/
+video/anime/
+video/ad/
+video/remotion/node_modules/
+deliverables/*.mp4
+deliverables/old/*.mp4
+*.mp4
+*.wav
+*.safetensors
+*.bin
+*.pt
+!runs/router.pt
+
+# --- no video in the public repo (user decision)
+video/
+deliverables/
+*.mp4
+*.mov
+*.webm
+*.gif
+
+# --- private infrastructure scripts (kept outside the repo)
+infra/
+llm/boot_*.sh
+llm/jobs_*.sh
+runs/api_before_*.py

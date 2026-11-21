@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08">
+ <BkToCstmrDbtCdtNtfctn>
+  <GrpHdr><MsgId>LUMCAMT05420261119</MsgId><CreDtTm>2026-11-19T18:30:00+01:00</CreDtTm></GrpHdr>
+  <Ntfctn>
+   <Id>NTF20261119</Id>
+   <CreDtTm>2026-11-19T18:30:00+01:00</CreDtTm>
+   <Acct><Id><IBAN>IT45S9902101000000000990100</IBAN></Id><Ccy>EUR</Ccy><Ownr><Nm>Lumen Bank S.p.A. - conto incassi finanziamenti</Nm></Ownr></Acct>
+   <Ntry>
+    <NtryRef>859</NtryRef>
+    <Amt Ccy="EUR">122.63</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-19</Dt></BookgDt>
+    <ValDt><Dt>2026-11-19</Dt></ValDt>
+    <AcctSvcrRef>LUM20261119000859</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261119000859</AcctSvcrRef><EndToEndId>E2E3494320525</EndToEndId></Refs>
+     <Amt Ccy="EUR">122.63</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Ottavio Tozzi</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT72R9902101005268256762002</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>acconto rata novembre</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+  </Ntfctn>
+ </BkToCstmrDbtCdtNtfctn>
+</Document>

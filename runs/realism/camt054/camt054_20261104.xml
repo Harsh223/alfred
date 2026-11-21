@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08">
+ <BkToCstmrDbtCdtNtfctn>
+  <GrpHdr><MsgId>LUMCAMT05420261104</MsgId><CreDtTm>2026-11-04T18:30:00+01:00</CreDtTm></GrpHdr>
+  <Ntfctn>
+   <Id>NTF20261104</Id>
+   <CreDtTm>2026-11-04T18:30:00+01:00</CreDtTm>
+   <Acct><Id><IBAN>IT45S9902101000000000990100</IBAN></Id><Ccy>EUR</Ccy><Ownr><Nm>Lumen Bank S.p.A. - conto incassi finanziamenti</Nm></Ownr></Acct>
+   <Ntry>
+    <NtryRef>363</NtryRef>
+    <Amt Ccy="EUR">1335.41</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000363</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000363</AcctSvcrRef><EndToEndId>E2E8723038837</EndToEndId></Refs>
+     <Amt Ccy="EUR">1335.41</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Ivo Bonomo</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT84B9903401005265770707855</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>pagamento rata november MUT-2024-00002</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>364</NtryRef>
+    <Amt Ccy="EUR">206.18</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000364</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000364</AcctSvcrRef><EndToEndId>E2E2912511694</EndToEndId></Refs>
+     <Amt Ccy="EUR">206.18</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Vittorio Capuana</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT02E9903430400551017701524</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>Rata n. 79 finanziamento PRE-2024-00459</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>365</NtryRef>
+    <Amt Ccy="EUR">2240.42</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000365</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000365</AcctSvcrRef><EndToEndId>E2E9486619010</EndToEndId></Refs>
+     <Amt Ccy="EUR">2240.42</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Guglielmo Comboni</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT44Y9906301020673242498855</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>RATA FID-2025-00661 11/2026</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>366</NtryRef>
+    <Amt Ccy="EUR">89.21</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000366</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000366</AcctSvcrRef><EndToEndId>E2E1677106609</EndToEndId></Refs>
+     <Amt Ccy="EUR">89.21</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Giovanna Tafuri</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT96M9904710200477998808287</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>/RFB/PRE-2021-00989</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>367</NtryRef>
+    <Amt Ccy="EUR">8994.08</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000367</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000367</AcctSvcrRef><EndToEndId>E2E3961014391</EndToEndId></Refs>
+     <Amt Ccy="EUR">8994.08</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Fulvio Cabibbo</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT28N9903446100382352758178</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>/RFB/FID-2025-00996</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>368</NtryRef>
+    <Amt Ccy="EUR">253.38</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000368</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000368</AcctSvcrRef><EndToEndId>E2E6002046880</EndToEndId></Refs>
+     <Amt Ccy="EUR">253.38</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Alderano Fantini</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT71J9906301010100580193089</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>/RFB/PRE-2022-01030</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>369</NtryRef>
+    <Amt Ccy="EUR">742.50</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000369</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000369</AcctSvcrRef><EndToEndId>E2E2342818562</EndToEndId></Refs>
+     <Amt Ccy="EUR">742.50</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Giovanni Turchetta</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT17X9906301000723124451412</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>pagamento rata november MUT-2020-01228</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>370</NtryRef>
+    <Amt Ccy="EUR">238.12</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000370</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000370</AcctSvcrRef><EndToEndId>E2E9463312506</EndToEndId></Refs>
+     <Amt Ccy="EUR">238.12</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Michelotto Bandello</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT13O9904710200937152374710</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>pagamento rata november PRE-2023-01259</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>371</NtryRef>
+    <Amt Ccy="EUR">187.94</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000371</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000371</AcctSvcrRef><EndToEndId>E2E7256932717</EndToEndId></Refs>
+     <Amt Ccy="EUR">187.94</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Piergiorgio Deledda</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT10P9904701001444195237444</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>pagamento rata november PRE-2026-02167</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+   <Ntry>
+    <NtryRef>372</NtryRef>
+    <Amt Ccy="EUR">253.33</Amt>
+    <CdtDbtInd>CRDT</CdtDbtInd>
+    <Sts><Cd>BOOK</Cd></Sts>
+    <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+    <ValDt><Dt>2026-11-04</Dt></ValDt>
+    <AcctSvcrRef>LUM20261104000372</AcctSvcrRef>
+    <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+    <NtryDtls><TxDtls>
+     <Refs><AcctSvcrRef>LUM20261104000372</AcctSvcrRef><EndToEndId>E2E7045963915</EndToEndId></Refs>
+     <Amt Ccy="EUR">253.33</Amt>
+     <RltdPties><Dbtr><Pty><Nm>Michele Casarin</Nm></Pty></Dbtr><DbtrAcct><Id><IBAN>IT76C9903401010884250310002</IBAN></Id></DbtrAcct></RltdPties>
+     <RmtInf><Ustrd>saldo</Ustrd></RmtInf>
+    </TxDtls></NtryDtls>
+   </Ntry>
+  </Ntfctn>
+ </BkToCstmrDbtCdtNtfctn>
+</Document>

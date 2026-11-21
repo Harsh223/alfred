@@ -1,0 +1,99 @@
+{
+ "train_rows": 19000,
+ "train_minutes": 16.2,
+ "hard": {
+  "n": 600,
+  "v1+rules": {
+   "char_recall": 0.9606,
+   "char_precision": 1.0,
+   "leakage": 0.0394,
+   "char_f1": 0.9799,
+   "exact_span_label_acc": 0.9297,
+   "ms_per_doc": 19.2
+  },
+  "v2+rules": {
+   "char_recall": 0.9073,
+   "char_precision": 1.0,
+   "leakage": 0.0927,
+   "char_f1": 0.9514,
+   "exact_span_label_acc": 0.766,
+   "ms_per_doc": 15.8
+  }
+ },
+ "nemotron_finance": {
+  "n": 400,
+  "v1+rules": {
+   "char_recall": 0.7391,
+   "char_precision": 0.8437,
+   "leakage": 0.2609,
+   "char_f1": 0.7879,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 19.2
+  },
+  "v2+rules": {
+   "char_recall": 0.9309,
+   "char_precision": 0.9955,
+   "leakage": 0.0691,
+   "char_f1": 0.9621,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 26.2
+  }
+ },
+ "ai4privacy_it": {
+  "n": 300,
+  "v1+rules": {
+   "char_recall": 0.8202,
+   "char_precision": 0.6888,
+   "leakage": 0.1798,
+   "char_f1": 0.7488,
+   "exact_span_label_acc": 0.0834,
+   "ms_per_doc": 25.2
+  },
+  "v2+rules": {
+   "char_recall": 0.8588,
+   "char_precision": 0.7616,
+   "leakage": 0.1412,
+   "char_f1": 0.8073,
+   "exact_span_label_acc": 0.0834,
+   "ms_per_doc": 29.3
+  }
+ },
+ "ai4privacy_en": {
+  "n": 300,
+  "v1+rules": {
+   "char_recall": 0.814,
+   "char_precision": 0.7136,
+   "leakage": 0.186,
+   "char_f1": 0.7605,
+   "exact_span_label_acc": 0.0827,
+   "ms_per_doc": 32.5
+  },
+  "v2+rules": {
+   "char_recall": 0.819,
+   "char_precision": 0.8429,
+   "leakage": 0.181,
+   "char_f1": 0.8308,
+   "exact_span_label_acc": 0.0827,
+   "ms_per_doc": 42.5
+  }
+ },
+ "bank_heldout": {
+  "n": 600,
+  "v1+rules": {
+   "char_recall": 1.0,
+   "char_precision": 1.0,
+   "leakage": 0.0,
+   "char_f1": 1.0,
+   "exact_span_label_acc": 1.0,
+   "ms_per_doc": 25.8
+  },
+  "v2+rules": {
+   "char_recall": 0.9953,
+   "char_precision": 0.9942,
+   "leakage": 0.0047,
+   "char_f1": 0.9947,
+   "exact_span_label_acc": 0.9543,
+   "ms_per_doc": 25.0
+  }
+ }
+}

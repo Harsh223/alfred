@@ -1,0 +1,97 @@
+{
+ "hard": {
+  "n": 600,
+  "ensemble_no_dates": {
+   "char_recall": 0.9957,
+   "char_precision": 0.9943,
+   "leakage": 0.0043,
+   "char_f1": 0.995,
+   "exact_span_label_acc": 0.9297,
+   "ms_per_doc": 2135.1
+  }
+ },
+ "nemotron_finance": {
+  "n": 400,
+  "ensemble_no_dates": {
+   "char_recall": 0.984,
+   "char_precision": 0.783,
+   "leakage": 0.016,
+   "char_f1": 0.8721,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 394.8
+  }
+ },
+ "ai4privacy_it": {
+  "n": 300,
+  "ensemble_no_dates": {
+   "char_recall": 0.988,
+   "char_precision": 0.5993,
+   "leakage": 0.012,
+   "char_f1": 0.7461,
+   "exact_span_label_acc": 0.0834,
+   "ms_per_doc": 270.0
+  }
+ },
+ "ai4privacy_en": {
+  "n": 300,
+  "ensemble_no_dates": {
+   "char_recall": 0.9752,
+   "char_precision": 0.603,
+   "leakage": 0.0248,
+   "char_f1": 0.7452,
+   "exact_span_label_acc": 0.0827,
+   "ms_per_doc": 271.0
+  }
+ },
+ "gretel_ood": {
+  "n": 400,
+  "ensemble_no_dates": {
+   "char_recall": 0.9671,
+   "char_precision": 0.7378,
+   "leakage": 0.0329,
+   "char_f1": 0.837,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 496.7
+  }
+ },
+ "bank_heldout": {
+  "n": 600,
+  "ensemble_no_dates": {
+   "char_recall": 1.0,
+   "char_precision": 0.9947,
+   "leakage": 0.0,
+   "char_f1": 0.9973,
+   "exact_span_label_acc": 1.0,
+   "ms_per_doc": 918.5
+  }
+ },
+ "policy_masks": {
+  "POL-0001": [],
+  "POL-0002": [
+   "Confidi"
+  ],
+  "POL-0003": [],
+  "POL-0004": [
+   "low-risk customers",
+   "high-risk customers",
+   "Expired identity documents"
+  ],
+  "POL-0005": [],
+  "POL-0006": [
+   "Compliance Office"
+  ],
+  "POL-0007": [
+   "8:00-20:00"
+  ]
+ },
+ "privacy_filter_labels_seen": {
+  "private_person": 7867,
+  "account_number": 7785,
+  "private_phone": 1637,
+  "private_email": 2017,
+  "private_date": 3208,
+  "private_address": 4701,
+  "private_url": 208,
+  "secret": 221
+ }
+}

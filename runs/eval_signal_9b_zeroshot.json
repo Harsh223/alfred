@@ -1,0 +1,8 @@
+{
+ "signal.exact": 0.9536,
+ "signal.contains": 0.9536,
+ "latency_s": 0.2889,
+ "n": 280,
+ "model": "student",
+ "tag": "signal_9b_zeroshot"
+}

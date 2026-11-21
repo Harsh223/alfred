@@ -1,0 +1,197 @@
+{
+ "passed": 38,
+ "total": 38,
+ "ts": "2026-11-21T14:52:59",
+ "checks": [
+  {
+   "test": "health is public",
+   "pass": true,
+   "evidence": "200 {\"status\":\"ok\",\"version\":\"1.0.0\",\"documents\":86,\"llm\":{\"student\":\"configured\"},\"checker\":\"down\"}"
+  },
+  {
+   "test": "metrics is public and has suites + red-team rounds",
+   "pass": true,
+   "evidence": "200 keys=['product', 'bank', 'generated_at', 'suites', 'redteam_rounds', 'models', 'pii_recall', 'workspace_pii']"
+  },
+  {
+   "test": "metrics contains no real personal data",
+   "pass": true,
+   "evidence": "leak=[]"
+  },
+  {
+   "test": "dashboard is public and has no personal data",
+   "pass": true,
+   "evidence": "200 leak=[]"
+  },
+  {
+   "test": "OpenAPI schema served at /api/openapi.json",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "Swagger UI at /api/docs",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "no key -> 401",
+   "pass": true,
+   "evidence": "401 invalid_api_key"
+  },
+  {
+   "test": "wrong key -> 401",
+   "pass": true,
+   "evidence": "401 invalid_api_key"
+  },
+  {
+   "test": "valid key works (RM brief)",
+   "pass": true,
+   "evidence": "200 rm_credit"
+  },
+  {
+   "test": "rate-limit headers present",
+   "pass": true,
+   "evidence": "{'x-ratelimit-limit': '60', 'x-ratelimit-remaining': '59'}"
+  },
+  {
+   "test": "IT asking for customer credit data is denied (role in body ignored)",
+   "pass": true,
+   "evidence": "200 denied leak=[]"
+  },
+  {
+   "test": "RM gets a cited answer, still pseudonymised",
+   "pass": true,
+   "evidence": "200 ok The company of <CLIENT_0002> is breaching its covenant, as it reported a Debt/EB"
+  },
+  {
+   "test": "unknown -> abstain",
+   "pass": true,
+   "evidence": "200 abstain"
+  },
+  {
+   "test": "IT denied /v1/autopilot/cases",
+   "pass": true,
+   "evidence": "403 forbidden_for_role"
+  },
+  {
+   "test": "IT denied /v1/autopilot/kpis",
+   "pass": true,
+   "evidence": "403 forbidden_for_role"
+  },
+  {
+   "test": "IT denied /v1/actions",
+   "pass": true,
+   "evidence": "403 forbidden_for_role"
+  },
+  {
+   "test": "IT denied /v1/audit",
+   "pass": true,
+   "evidence": "403 forbidden_for_role"
+  },
+  {
+   "test": "IT cannot run the autopilot",
+   "pass": true,
+   "evidence": "403"
+  },
+  {
+   "test": "IT cannot curate credit memory",
+   "pass": true,
+   "evidence": "404 not_found"
+  },
+  {
+   "test": "pseudonymise masks vault name, IBAN, email, phone",
+   "pass": true,
+   "evidence": "200 Customer <CLIENT_0289> asked to move funds to <IBAN_0001>; reach her at <EMAIL> or <PHONE>."
+  },
+  {
+   "test": "pseudonymise for IT gives generic labels, not pseudonyms",
+   "pass": true,
+   "evidence": "200 Customer <PERSON> asked to move funds to <IBAN>; reach her at <EMAIL> or <PHONE>."
+  },
+  {
+   "test": "propose fact -> pending",
+   "pass": true,
+   "evidence": "201 F-0100"
+  },
+  {
+   "test": "four-eyes: proposer key cannot approve its own fact",
+   "pass": true,
+   "evidence": "409 four_eyes_blocked"
+  },
+  {
+   "test": "a different key can approve it",
+   "pass": true,
+   "evidence": "200 approved"
+  },
+  {
+   "test": "memory poisoning refused",
+   "pass": true,
+   "evidence": "422 memory_poisoning_blocked"
+  },
+  {
+   "test": "IT sees only IT/all facts",
+   "pass": true,
+   "evidence": "200 n=0"
+  },
+  {
+   "test": "RM lists proposed actions",
+   "pass": true,
+   "evidence": "200 n=3"
+  },
+  {
+   "test": "approval without X-Human-Approval -> 428",
+   "pass": true,
+   "evidence": "428 human_approval_required"
+  },
+  {
+   "test": "X-Human-Approval must be exactly true",
+   "pass": true,
+   "evidence": "428"
+  },
+  {
+   "test": "IT cannot approve even with the header",
+   "pass": true,
+   "evidence": "403 forbidden_for_role"
+  },
+  {
+   "test": "nothing executed by the refused attempts",
+   "pass": true,
+   "evidence": "A-KYC-0018"
+  },
+  {
+   "test": "human-approved action executes",
+   "pass": true,
+   "evidence": "200 {'action_id': 'A-KYC-0018', 'status': 'executed', 'decided_by': 'api-client 76b7fd51cb (rm_credit)'}"
+  },
+  {
+   "test": "re-deciding a decided action -> 409",
+   "pass": true,
+   "evidence": "409 not_pending"
+  },
+  {
+   "test": "four-eyes: requester key cannot approve its own request",
+   "pass": true,
+   "evidence": "A-REQ-1795269179 409 four_eyes_blocked"
+  },
+  {
+   "test": "every API call is audited (api_call), visible to compliance",
+   "pass": true,
+   "evidence": "200 n=31"
+  },
+  {
+   "test": "audit details carry no API keys",
+   "pass": true,
+   "evidence": ""
+  },
+  {
+   "test": "rate limit: 429 after the per-key budget, with Retry-After",
+   "pass": true,
+   "evidence": "429 at request 50"
+  },
+  {
+   "test": "other keys are not affected by one key's limit",
+   "pass": true,
+   "evidence": "200"
+  }
+ ]
+}

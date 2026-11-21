@@ -1,0 +1,8 @@
+{
+ "signal.exact": 0.8571,
+ "signal.contains": 0.8571,
+ "latency_s": 0.2172,
+ "n": 280,
+ "model": "signal",
+ "tag": "signal_0.8b_distilled"
+}

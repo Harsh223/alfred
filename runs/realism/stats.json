@@ -1,0 +1,70 @@
+{
+ "customers": 2400,
+ "sme_share": 0.11,
+ "loans": 2988,
+ "loans_by_product": {
+  "prestito": 1629,
+  "mutuo": 1107,
+  "fido_pmi": 252
+ },
+ "arrears_rate_by_product": {
+  "prestito": 0.0614,
+  "mutuo": 0.0217,
+  "fido_pmi": 0.0476
+ },
+ "arrears_rate_total": 0.0455,
+ "cases": 136,
+ "buckets": {
+  "90+": 14,
+  "31-60": 26,
+  "1-30": 82,
+  "61-90": 14
+ },
+ "exceptions": {
+  "null": 93,
+  "high_amount": 3,
+  "vulnerable": 7,
+  "dispute": 5,
+  "forbearance": 7,
+  "unmatched_payment": 15,
+  "deceased": 2,
+  "aml_alert_open": 1,
+  "complaint_open": 3
+ },
+ "straight_through_share": 0.684,
+ "avg_principal": {
+  "prestito": 12657,
+  "mutuo": 157735,
+  "fido_pmi": 137103
+ },
+ "avg_rate": {
+  "prestito": 9.49,
+  "mutuo": 2.57,
+  "fido_pmi": 5.67
+ },
+ "installments": 33292,
+ "camt054_files": 27,
+ "payments": 874,
+ "payments_unmatched_loan": 14,
+ "payments_suspense": 3,
+ "documents": 105,
+ "docs_by_kind": {
+  "policy": 10,
+  "email": 33,
+  "credit_memo": 15,
+  "kyc_note": 19,
+  "chat": 9,
+  "ticket": 19
+ },
+ "cfpb_language_emails": 24,
+ "vault": 5618,
+ "events": {
+  "covenant": "MEM-0097",
+  "aml": "TKT-0101",
+  "batch3": "TKT-0102",
+  "batch1": "TKT-0103",
+  "injection": "EML-0104",
+  "wrong_fact": "CHT-0105"
+ },
+ "aml_case": "CASE-0076"
+}

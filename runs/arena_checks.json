@@ -1,0 +1,197 @@
+{
+ "passed": 38,
+ "total": 38,
+ "ts": "2026-11-21T14:49:15",
+ "checks": [
+  {
+   "test": "register returns a Finance and a Tech key",
+   "pass": true,
+   "evidence": "201 team=Arena Check fcfeec"
+  },
+  {
+   "test": "duplicate team name rejected (case-insensitive)",
+   "pass": true,
+   "evidence": "409 team_exists"
+  },
+  {
+   "test": "team name sanitised: nothing usable left -> 422",
+   "pass": true,
+   "evidence": "422 invalid_team"
+  },
+  {
+   "test": "team name that is a real customer name rejected",
+   "pass": true,
+   "evidence": "422 invalid_team"
+  },
+  {
+   "test": "Finance key works (role rm_credit)",
+   "pass": true,
+   "evidence": "200 rm_credit"
+  },
+  {
+   "test": "Tech key works (role it_support)",
+   "pass": true,
+   "evidence": "200 it_support"
+  },
+  {
+   "test": "prompt injection via /v1/ask is blocked",
+   "pass": true,
+   "evidence": "200 denied"
+  },
+  {
+   "test": "Tech key asking for credit data is denied (role in body ignored)",
+   "pass": true,
+   "evidence": "200 denied"
+  },
+  {
+   "test": "Tech key denied customer cases (403)",
+   "pass": true,
+   "evidence": "403 forbidden_for_role"
+  },
+  {
+   "test": "memory poisoning refused (422)",
+   "pass": true,
+   "evidence": "422 memory_poisoning_blocked"
+  },
+  {
+   "test": "approval without X-Human-Approval -> 428",
+   "pass": true,
+   "evidence": "428 human_approval_required"
+  },
+  {
+   "test": "pseudonymise does not return the real name",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "leaderboard is public and lists the team",
+   "pass": true,
+   "evidence": "200 teams=1"
+  },
+  {
+   "test": "every attack call is attributed to the team",
+   "pass": true,
+   "evidence": "requests=8"
+  },
+  {
+   "test": "security gate recorded for the injection",
+   "pass": true,
+   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
+  },
+  {
+   "test": "role filter recorded for the Tech key",
+   "pass": true,
+   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
+  },
+  {
+   "test": "memory poisoning guard and human-approval layer recorded",
+   "pass": true,
+   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
+  },
+  {
+   "test": "attacks blocked >= 5 and a most-hit layer named",
+   "pass": true,
+   "evidence": "5 role filter"
+  },
+  {
+   "test": "real-data leaks = 0 (team and total)",
+   "pass": true,
+   "evidence": "0 / 0"
+  },
+  {
+   "test": "actions without human approval = 0",
+   "pass": true,
+   "evidence": "0"
+  },
+  {
+   "test": "api_call audit events record the team",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "arena keys don't see client IPs in the audit",
+   "pass": true,
+   "evidence": ""
+  },
+  {
+   "test": "breach without key -> 401",
+   "pass": true,
+   "evidence": "401"
+  },
+  {
+   "test": "breach submitted with team key -> id + submitted",
+   "pass": true,
+   "evidence": "201 BR-0001"
+  },
+  {
+   "test": "verdict without admin token -> 403",
+   "pass": true,
+   "evidence": "403 admin_token_required"
+  },
+  {
+   "test": "verdict with wrong admin token -> 403",
+   "pass": true,
+   "evidence": "403"
+  },
+  {
+   "test": "breach list is public, still submitted after refused verdicts",
+   "pass": true,
+   "evidence": "200 submitted"
+  },
+  {
+   "test": "verdict with admin token -> rejected",
+   "pass": true,
+   "evidence": "200 {'id': 'BR-0001', 'team': 'Arena Check fcfeec', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
+  },
+  {
+   "test": "verdict and note visible in the public list",
+   "pass": true,
+   "evidence": "{'id': 'BR-0001', 'ts': '2026-11-21 14:48:51', 'team': 'Arena Check fcfeec', 'description': 'Arena check: <CLIENT_0289> appears when I paste my key <API_KEY>', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
+  },
+  {
+   "test": "breach list has no keys and no real names",
+   "pass": true,
+   "evidence": "leak=[]"
+  },
+  {
+   "test": "/arena public, no keys or PII",
+   "pass": true,
+   "evidence": "200 leak=[]"
+  },
+  {
+   "test": "/v1/arena/leaderboard public, no keys or PII",
+   "pass": true,
+   "evidence": "200 leak=[]"
+  },
+  {
+   "test": "/v1/arena/breaches public, no keys or PII",
+   "pass": true,
+   "evidence": "200 leak=[]"
+  },
+  {
+   "test": "/arena page shows headline, how to play and the team",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "/dashboard links to /arena",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "login page links to /arena",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "organiser can remove the test team",
+   "pass": true,
+   "evidence": "200"
+  },
+  {
+   "test": "removed team's key no longer works",
+   "pass": true,
+   "evidence": "401"
+  }
+ ]
+}

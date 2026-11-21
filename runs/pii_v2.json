@@ -1,0 +1,142 @@
+{
+ "hard": {
+  "n": 600,
+  "gliner_base": {
+   "char_recall": 0.7824,
+   "char_precision": 1.0,
+   "leakage": 0.2176,
+   "char_f1": 0.8779,
+   "exact_span_label_acc": 0.7741,
+   "ms_per_doc": 27.6
+  },
+  "ours_ft+rules": {
+   "char_recall": 0.9606,
+   "char_precision": 1.0,
+   "leakage": 0.0394,
+   "char_f1": 0.9799,
+   "exact_span_label_acc": 0.9297,
+   "ms_per_doc": 21.5
+  },
+  "openai_privacy_filter": {
+   "char_recall": 0.942,
+   "char_precision": 0.9685,
+   "leakage": 0.058,
+   "char_f1": 0.9551,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 546.1
+  },
+  "ours+privacy_filter": {
+   "char_recall": 0.9959,
+   "char_precision": 0.994,
+   "leakage": 0.0041,
+   "char_f1": 0.9949,
+   "exact_span_label_acc": 0.9297,
+   "ms_per_doc": 316.2
+  }
+ },
+ "nemotron_finance": {
+  "n": 400,
+  "gliner_base": {
+   "char_recall": 0.7514,
+   "char_precision": 0.727,
+   "leakage": 0.2486,
+   "char_f1": 0.739,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 19.5
+  },
+  "ours_ft+rules": {
+   "char_recall": 0.7391,
+   "char_precision": 0.8442,
+   "leakage": 0.2609,
+   "char_f1": 0.7881,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 19.9
+  },
+  "openai_privacy_filter": {
+   "char_recall": 0.9472,
+   "char_precision": 0.6764,
+   "leakage": 0.0528,
+   "char_f1": 0.7892,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 381.4
+  },
+  "ours+privacy_filter": {
+   "char_recall": 0.9847,
+   "char_precision": 0.6746,
+   "leakage": 0.0153,
+   "char_f1": 0.8007,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 398.4
+  }
+ },
+ "ai4privacy_it": {
+  "n": 300,
+  "gliner_base": {
+   "char_recall": 0.8034,
+   "char_precision": 0.6599,
+   "leakage": 0.1966,
+   "char_f1": 0.7246,
+   "exact_span_label_acc": 0.0799,
+   "ms_per_doc": 16.3
+  },
+  "ours_ft+rules": {
+   "char_recall": 0.8202,
+   "char_precision": 0.6888,
+   "leakage": 0.1798,
+   "char_f1": 0.7488,
+   "exact_span_label_acc": 0.0834,
+   "ms_per_doc": 16.5
+  },
+  "openai_privacy_filter": {
+   "char_recall": 0.9562,
+   "char_precision": 0.5774,
+   "leakage": 0.0438,
+   "char_f1": 0.72,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 259.5
+  },
+  "ours+privacy_filter": {
+   "char_recall": 0.995,
+   "char_precision": 0.5733,
+   "leakage": 0.005,
+   "char_f1": 0.7275,
+   "exact_span_label_acc": 0.0834,
+   "ms_per_doc": 285.3
+  }
+ },
+ "ai4privacy_en": {
+  "n": 300,
+  "gliner_base": {
+   "char_recall": 0.7989,
+   "char_precision": 0.6595,
+   "leakage": 0.2011,
+   "char_f1": 0.7225,
+   "exact_span_label_acc": 0.08,
+   "ms_per_doc": 16.4
+  },
+  "ours_ft+rules": {
+   "char_recall": 0.814,
+   "char_precision": 0.7176,
+   "leakage": 0.186,
+   "char_f1": 0.7628,
+   "exact_span_label_acc": 0.0827,
+   "ms_per_doc": 16.4
+  },
+  "openai_privacy_filter": {
+   "char_recall": 0.9522,
+   "char_precision": 0.5835,
+   "leakage": 0.0478,
+   "char_f1": 0.7236,
+   "exact_span_label_acc": 0.0,
+   "ms_per_doc": 264.3
+  },
+  "ours+privacy_filter": {
+   "char_recall": 0.9932,
+   "char_precision": 0.5802,
+   "leakage": 0.0068,
+   "char_f1": 0.7325,
+   "exact_span_label_acc": 0.0827,
+   "ms_per_doc": 293.4
+  }
+ }
+}

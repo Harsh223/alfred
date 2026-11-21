@@ -1,0 +1,17 @@
+{
+ "triage.valid_json": 1.0,
+ "triage.decision": 1.0,
+ "triage.exception": 1.0,
+ "triage.exact": 1.0,
+ "latency_s": 1.7159,
+ "qa.unans_abstain": 1.0,
+ "qa.hallucinated": 0.0,
+ "qa.ans_correct": 1.0,
+ "qa.ans_cited": 1.0,
+ "qa.false_abstain": 0.0,
+ "extract_facts.valid_json": 1.0,
+ "extract_facts.key_recall": 1.0,
+ "n": 480,
+ "model": "student_v3",
+ "tag": "student_v3"
+}
