@@ -21,20 +21,16 @@ Everything runs on **open-weight models on the bank's own infrastructure** — n
 
 ## Architecture
 
-```
-raw input ──▶ ① PRIVACY SHIELD (GLiNER-bank + rules) ──▶ DuckDB (masked docs · vault 🔒 · memory · actions · audit)
-                                                              │
-        ┌─────────────────────────────────────────────────────┴───────────────────────────────┐
-        ▼                                                                                     ▼
-② AUTOPILOT: rules decide · 9B cross-checks ·                    ③ BRAIN: security gate → router (from scratch) →
-  exceptions → human · CCD2/AI-Act letters                         role filter BEFORE search → approved memory →
-                                                                   9B answer + citations → 27B checker → or "I don't know"
-        └───────────────────────────────┬──────────────────────────────────────────────────────┘
-                                        ▼
-                ④ HUMAN APPROVAL (one click · four-eyes on chat requests and new facts)
-                                        ▼
-             OUTBOX (letters + PEC batch, real names filled in only now)  ──▶  AUDIT TRAIL
-```
+![ALFRED system architecture](docs/images/architecture.png)
+
+<table><tr>
+<td width="50%"><b>How a question is answered</b><br/><img src="docs/images/question-flow.png" alt="Question flow: security gate, intent router, role filter, approved memory, 9B answer, independent 27B checker, or I don't know"/></td>
+<td width="50%"><b>Autopilot: one overdue loan, end to end</b><br/><img src="docs/images/autopilot-flow.png" alt="Autopilot flow: AML, customer flags, unmatched payments and amount checks route to the exception queue; otherwise bucket rule, model cross-check, proposal, human approval, outbox"/></td>
+</tr></table>
+
+**How the models were built and hardened**
+
+![Training and red-team pipeline](docs/images/training-pipeline.png)
 
 ### Models — who does what
 | Model | Origin | Runs on | Job |
