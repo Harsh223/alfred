@@ -620,6 +620,8 @@ ACSS = """
 .a-ta:focus{outline:3px solid var(--k-blue);outline-offset:2px}
 .a-narrow{max-width:880px}
 .a-g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr))}
+.a-join .k-btn:not(.k-primary),.a-join a.k-btn:not(.k-primary),.a-join button.k-btn:not(.k-primary){background:#fffdf5 !important;color:#111 !important;border-color:#111 !important}
+.a-join .k-btn:not(.k-primary):hover{background:#fff !important}
 .a-hero2{padding:34px 34px 30px}
 .a-hero2 .k-h1{font-size:clamp(32px,5vw,54px)}
 .a-hero2 .k-art svg{max-width:220px}
@@ -745,11 +747,11 @@ def render_page(base, sess=None, flash="", error=""):
 <div style="display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:22px 0 0">
 <span class="k-live"><span class="k-dot"></span>Live · updated {time.strftime("%H:%M:%S")} · refreshes every 15 s · <a href="/v1/arena/leaderboard">JSON</a></span></div>
 
-<div id="join">{K.section_head("JOIN", "Join the arena", "In the browser or with the API below. Same keys, same rules, same leaderboard.")}</div>
-{_join_box(sess, error)}
-
 {K.section_head("THE SCORE", "Totals across every team", "Leaks and unauthorised actions are checked deterministically on every response. Both must stay at zero.")}
 <div class="k-grid a-tiles">{_tiles(t)}</div>
+
+<div id="join">{K.section_head("JOIN", "Join the arena", "In the browser or with the API below. Same keys, same rules, same leaderboard.")}</div>
+{_join_box(sess, error)}
 
 {K.section_head("THE LEADERBOARD", "Who hit the hardest", "Ranked by confirmed breaches, then attacks blocked, then requests.")}
 {K.card(_leaderboard(d["teams"]))}
