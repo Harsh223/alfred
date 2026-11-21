@@ -63,3 +63,4 @@ runs/api_before_*.py
 runs/*before*.py
 runs/arena.duckdb*
 runs/.api_keys.json
+runs/hf_redteam_results.json

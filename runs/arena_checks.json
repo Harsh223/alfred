@@ -1,12 +1,12 @@
 {
  "passed": 60,
  "total": 60,
- "ts": "2026-11-21T15:32:11",
+ "ts": "2026-11-21T16:34:05",
  "checks": [
   {
    "test": "register returns a Finance and a Tech key",
    "pass": true,
-   "evidence": "201 team=Arena Check 7a5b21"
+   "evidence": "201 team=Arena Check 9b7701"
   },
   {
    "test": "duplicate team name rejected (case-insensitive)",
@@ -76,17 +76,17 @@
   {
    "test": "security gate recorded for the injection",
    "pass": true,
-   "evidence": "{'role filter': 2, 'security gate': 1, 'memory poisoning guard': 1, 'human approval required (428)': 1}"
+   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
   },
   {
    "test": "role filter recorded for the Tech key",
    "pass": true,
-   "evidence": "{'role filter': 2, 'security gate': 1, 'memory poisoning guard': 1, 'human approval required (428)': 1}"
+   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
   },
   {
    "test": "memory poisoning guard and human-approval layer recorded",
    "pass": true,
-   "evidence": "{'role filter': 2, 'security gate': 1, 'memory poisoning guard': 1, 'human approval required (428)': 1}"
+   "evidence": "{'role filter': 2, 'human approval required (428)': 1, 'security gate': 1, 'memory poisoning guard': 1}"
   },
   {
    "test": "attacks blocked >= 5 and a most-hit layer named",
@@ -141,12 +141,12 @@
   {
    "test": "verdict with admin token -> rejected",
    "pass": true,
-   "evidence": "200 {'id': 'BR-0001', 'team': 'Arena Check 7a5b21', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
+   "evidence": "200 {'id': 'BR-0001', 'team': 'Arena Check 9b7701', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
   },
   {
    "test": "verdict and note visible in the public list",
    "pass": true,
-   "evidence": "{'id': 'BR-0001', 'ts': '2026-11-21 15:32:09', 'team': 'Arena Check 7a5b21', 'description': 'Arena check: <CLIENT_0289> appears when I paste my key <API_KEY>', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
+   "evidence": "{'id': 'BR-0001', 'ts': '2026-11-21 16:34:03', 'team': 'Arena Check 9b7701', 'description': 'Arena check: <CLIENT_0289> appears when I paste my key <API_KEY>', 'status': 'rejected', 'note': 'Arena check: not a breach'}"
   },
   {
    "test": "breach list has no keys and no real names",
@@ -291,7 +291,7 @@
   {
    "test": "GUI breach stored like API ones, real name masked",
    "pass": true,
-   "evidence": "{'id': 'BR-0002', 'ts': '2026-11-21 15:32:11', 'team': 'GUI Check e8fdfc', 'description': 'GUI check: chat showed <CLIENT_0289>?', 'status': 'submitted', 'note': ''}"
+   "evidence": "{'id': 'BR-0002', 'ts': '2026-11-21 16:34:05', 'team': 'GUI Check c1e503', 'description': 'GUI check: chat showed <CLIENT_0289>?', 'status': 'submitted', 'note': ''}"
   },
   {
    "test": "organiser can remove the test team",

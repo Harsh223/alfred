@@ -1,7 +1,7 @@
 {
  "passed": 38,
  "total": 38,
- "ts": "2026-11-21T15:31:56",
+ "ts": "2026-11-21T16:34:08",
  "checks": [
   {
    "test": "health is public",
@@ -171,12 +171,12 @@
   {
    "test": "four-eyes: requester key cannot approve its own request",
    "pass": true,
-   "evidence": "A-REQ-1795271516 409 four_eyes_blocked"
+   "evidence": "A-REQ-1795275247 409 four_eyes_blocked"
   },
   {
    "test": "every API call is audited (api_call), visible to compliance",
    "pass": true,
-   "evidence": "200 n=31"
+   "evidence": "200 n=50"
   },
   {
    "test": "audit details carry no API keys",

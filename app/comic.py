@@ -16,11 +16,12 @@ import html as _html
 import math
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">')
 
 # --------------------------------------------------------------------------- tokens
 TOKENS = """
 :root{--k-display:"Bowlby One","Arial Black","Helvetica Neue",Impact,sans-serif;
+--k-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 --k-body:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 --k-red:#d9483b;--k-coral:#ee6a55;--k-yellow:#f5c542;--k-blue:#2f5bd3;--k-black:#111111;--k-white:#ffffff;
 --k-r:14px;--k-bw:3px;--k-off:6px}
@@ -187,6 +188,25 @@ details.k-tv{margin-top:14px}details.k-tv summary{cursor:pointer;font-weight:800
   .k-card.k-tilt-l,.k-card.k-tilt-r{transform:none}
 }
 @media (prefers-reduced-motion:reduce){.k-btn{transition:none}}
+
+/* code cards with a copy button (arena, API docs) */
+.k-code{position:relative;margin:12px 0 0;border:2.5px solid var(--k-line);border-radius:12px;background:#15142f;box-shadow:4px 4px 0 var(--k-shadow);overflow:hidden}
+:root[data-theme=dark] .k-code{background:#0b0a24}
+.k-code-h{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 8px 7px 12px;background:#24224f;border-bottom:2px solid #000;
+  font:800 10.5px/1 var(--k-body);letter-spacing:.1em;text-transform:uppercase;color:#f5c542}
+.k-code pre{margin:0;padding:13px 14px;font:12.5px/1.6 var(--k-mono);color:#f3efe3;white-space:pre-wrap;word-break:break-word;overflow-x:auto}
+.k-code pre .c{color:#9b98d6}.k-code pre .s{color:#ffd76a}.k-code pre .k{color:#ff9d8f}
+.k-copy{font:800 10.5px/1 var(--k-body);letter-spacing:.08em;text-transform:uppercase;color:#111;background:#f5c542;border:2px solid #000;border-radius:999px;
+  padding:5px 10px;cursor:pointer;box-shadow:2px 2px 0 #000}
+.k-copy:active{transform:translate(2px,2px);box-shadow:none}.k-copy:focus-visible{outline:3px solid var(--k-blue);outline-offset:2px}
+.k-ic{font:600 .92em var(--k-mono);background:var(--k-tint);border:1.5px solid var(--k-grid);border-radius:5px;padding:0 5px;color:var(--k-ink);word-break:break-word}
+.k-card.k-hl .k-ic{background:rgba(255,255,255,.6);border-color:rgba(0,0,0,.25)}
+
+/* HTTP method pills */
+.k-m{display:inline-grid;place-items:center;min-width:64px;font:800 11px/1 var(--k-body);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;
+  border:2px solid #111;border-radius:6px;box-shadow:2px 2px 0 #111;color:#fff;background:#555}
+.k-m.get{background:var(--k-blue)}.k-m.post{background:var(--k-yellow);color:#111}.k-m.delete{background:var(--k-red)}
+.k-m.put,.k-m.patch{background:var(--k-coral);color:#111}
 """
 
 CSS = TOKENS + COMPONENTS
@@ -300,11 +320,30 @@ def mascot(title="Alfred the butler-owl"):
 </g><circle cx="80" cy="84" r="2.2" fill="#fff"/><circle cx="116" cy="84" r="2.2" fill="#fff"/></svg>"""
 
 
-def page(title, body, refresh=None, extra_css="", lang="en"):
+COPY_JS = """<script>(function(){function cp(t,b){function ok(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o},1400)}
+function fb(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();
+try{document.execCommand('copy');ok()}catch(e){}document.body.removeChild(a)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fb)}else fb()}
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-copy]');if(!b)return;var el=document.getElementById(b.getAttribute('data-copy'));
+if(el)cp(el.textContent,b)})})();</script>"""
+
+
+def code(text, cid, label="curl", raw_html=False):
+    """Dark code card with a label and a copy button (needs COPY_JS on the page). `cid` must be unique on the page."""
+    body = text if raw_html else e(text)
+    return (f'<div class="k-code"><div class="k-code-h"><span>{e(label)}</span><button type="button" class="k-copy" data-copy="{e(cid)}" '
+            f'aria-label="Copy {e(label)}">Copy</button></div><pre id="{e(cid)}">{body}</pre></div>')
+
+
+def method(m):
+    return f'<span class="k-m {e(m.lower())}">{e(m.upper())}</span>'
+
+
+def page(title, body, refresh=None, extra_css="", lang="en", head=""):
     """Full HTML document with fonts, theme tokens/components, theme bootstrap + toggle. `refresh` = seconds between
     reloads (JS reload keeps the URL hash, so the chosen theme survives even when localStorage is unavailable)."""
     reload_js = (f"<script>setTimeout(function(){{location.reload()}},{int(refresh) * 1000});</script>"
                  f'<noscript><meta http-equiv="refresh" content="{int(refresh)}"></noscript>') if refresh else ""
     return (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<title>{e(title)}</title>{THEME_HEAD_JS}{FONTS}<style>{CSS}{extra_css}</style></head>'
+            f'<title>{e(title)}</title>{THEME_HEAD_JS}{FONTS}{head}<style>{CSS}{extra_css}</style></head>'
             f'<body>{body}{THEME_TOGGLE_JS}{reload_js}</body></html>')

@@ -7,7 +7,7 @@ from brain import llm
 from autopilot import engine as E
 from app.ui import page, tag, head, section, empty, panel
 
-app = FastAPI(title="ALFRED API", docs_url="/api/docs", redoc_url=None, openapi_url="/api/openapi.json")   # /docs is the Sources page
+app = FastAPI(title="ALFRED API", docs_url=None, redoc_url=None, openapi_url="/api/openapi.json")   # /docs is the Sources page
 USERS = {"rm_credit": "Anna Ferri", "it_support": "Luca Bruno", "compliance": "Sofia Marino"}   # fictional staff
 BRIEF_EVERY_MIN = int(os.environ.get("BRIEF_EVERY_MIN", "30"))
 
@@ -837,8 +837,9 @@ def api_state(req: Request):
 
 
 # ------------------------------------------------------------------ public REST API (/v1) + metrics dashboard
-from app import api as _api, dashboard as _dash
+from app import api as _api, dashboard as _dash, apidocs as _apidocs
 _api.install(app)
+_apidocs.install(app)   # branded /api/docs (+ plain Swagger at /api/swagger)
 if os.environ.get("ARENA_MODE", "1") != "0":   # public "Attack ALFRED" arena (/arena, /v1/arena/*); on by default
     from app import arena as _arena
     _arena.USERS = USERS
