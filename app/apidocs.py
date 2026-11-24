@@ -11,8 +11,8 @@ from fastapi.responses import HTMLResponse
 from app import comic as K
 
 SWAGGER = "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/"
-BASE_URL = "https://alfred.harsh.one/v1"
-ALIAS_HOST = "api.alfred.harsh.one"
+BASE_URL = "http://127.0.0.1:8080/v1"   # the public demo host is offline; run ALFRED locally
+ALIAS_HOST = "localhost:8080"
 CREDIT_ONLY = ("/v1/autopilot/", "/v1/actions", "/v1/audit")     # Depends(credit_only) in app/api.py
 TAG_BLURB = {"Brain": "Ask questions and read the morning brief. Answers respect your key's role.",
              "Privacy": "Mask personal data before it goes anywhere else.",

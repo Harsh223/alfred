@@ -2,7 +2,7 @@
 
 **An AI colleague a bank can trust: it speaks first, knows what it doesn't know, and never acts without a person's approval.**
 Built in one day for the GDG *Agentic AI in companies* hackathon (Turin, 21 Nov 2026 · track sponsor Ariete Tech Solutions) for a fictional bank, **Lumen Bank**.
-**Live:** [alfred.harsh.one](https://alfred.harsh.one) · public scoreboard [/dashboard](https://alfred.harsh.one/dashboard) · **[Attack ALFRED](https://alfred.harsh.one/arena)** (join as a team in the browser or via API) · API docs [/api/docs](https://alfred.harsh.one/api/docs)
+**Status:** the hackathon has ended and ALFRED is **no longer hosted** — the live demo, public arena and API at alfred.harsh.one are offline. Everything needed to run it yourself is in this repository (see *Run it*), and the trained models are on Hugging Face (below). The final public arena scoreboard read: 8,210 attack attempts from 7 teams and AI red-team models, 0 real-data leaks, 0 actions without approval.
 
 Everything runs on **open-weight models on the bank's own infrastructure** — no customer data ever reaches a third-party AI.
 
